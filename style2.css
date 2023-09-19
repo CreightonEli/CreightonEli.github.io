@@ -62,7 +62,8 @@ body {
     display: block;
     margin: 0px auto 10px auto;
     border-radius: 10em;
-    width: 300px;
+    min-width: 150px;
+    max-width: 300px;
     transition: var(--animation-delay);
 }
 .avatar:hover {
@@ -215,6 +216,11 @@ p {
     max-width: 90%;
     margin: 20px auto;
     font-size: 16pt;
+}
+@media (max-width: 540px){
+    p {
+        text-align: center;
+    }
 }
 
 /* horizontal rule */
