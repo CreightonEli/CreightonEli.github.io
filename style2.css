@@ -18,6 +18,10 @@
     --text-color-3: #d1d3d6;
     --text-glow: #ffffff1f;
 
+    /* Gradients */
+    --gradient-1: linear-gradient(var(--background-color-1), var(--background-color-2));
+    --gradient-2: linear-gradient(45deg, #f26430, #8f3aa0, #6761a8);
+
     /* Animation Timers */
     --animation-delay: 355ms;
 
@@ -32,7 +36,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(var(--background-color-1), var(--background-color-2));
+    background-image: var(--gradient-1);
     background-size: cover;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
@@ -47,7 +51,25 @@ body {
     }
 }
 
+.banner {
+    background-image: var(--gradient-2);
+    background-size: 100%;
+}
+
 /* Images */
+
+.avatar {
+    display: block;
+    margin: 0px auto 10px auto;
+    border-radius: 10em;
+    width: 300px;
+    transition: var(--animation-delay);
+}
+.avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 0px 2px #ffffff8c;
+    cursor: crosshair;
+}
 
 img {
     display: inline-block;
@@ -74,6 +96,23 @@ img:hover {
 /* Buttons */
 
 button {
+    background-color: var(--fill-color-3);
+    color: var(--text-color-1);
+    font-size: 12pt;
+    border: 2px solid var(--border-color-2);
+    padding: 20px;
+    border-radius: 5em;
+    transition: var(--animation-delay);
+    min-width: 200px;
+}
+button:hover {
+    box-shadow: 0px 0px 10px var(--text-glow);
+    background-image: var(--gradient-2);
+    transform: scale(105%);
+    cursor: pointer;
+}
+
+#home {
     margin: 50px 20px;
     padding: 10px;
     min-width: 60px;
@@ -85,14 +124,14 @@ button {
     border-radius: 1em;
     transition: var(--animation-delay);
 }
-button:hover {
-    color: var(--text-color-1);
+#home:hover {
+    color: #fff;
     box-shadow: 0px 0px 10px var(--text-glow);
     transform: scale(105%);
     cursor: pointer;
 }
 @media (max-width: 1020px) {
-    button {
+    #home {
         margin: 15px 15px;
     }
 }
@@ -161,6 +200,10 @@ section {
 /* Container Div */
 
 .container {
+    margin: 0px 10%;
+}
+
+.centeredContainer {
     text-align: center;
     margin: 50px;
 }
@@ -171,6 +214,7 @@ p {
     color: var(--text-color-3);
     max-width: 90%;
     margin: 20px auto;
+    font-size: 16pt;
 }
 
 /* horizontal rule */
@@ -178,6 +222,7 @@ p {
 hr {
     background-color: var(--border-color-3);
     height: 2px;
+    width: 90%;
     border: none;
 }
 
