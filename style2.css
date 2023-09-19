@@ -104,7 +104,7 @@ button {
     padding: 20px;
     border-radius: 5em;
     transition: var(--animation-delay);
-    min-width: 200px;
+    min-width: 170px;
 }
 button:hover {
     box-shadow: 0px 0px 10px var(--text-glow);
