@@ -97,6 +97,7 @@ img:hover {
 /* Buttons */
 
 button {
+    margin: 8px;
     background-color: var(--fill-color-3);
     color: var(--text-color-1);
     font-size: 12pt;
