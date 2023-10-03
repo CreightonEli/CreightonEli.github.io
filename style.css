@@ -179,7 +179,8 @@ main {
         margin: 0px 0px 0px 40%;
         border-radius: 0em;
         border-top: none;
-        border-bottom: none;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
     }
 }
 
