@@ -7,6 +7,10 @@
     --fill-color-2: #21262d;
     --fill-color-3: #292d34;
 
+    /* Gradients */
+    --gradient-1: linear-gradient(var(--background-color-1), var(--background-color-2));
+    --gradient-2: linear-gradient(45deg, #f26430, #8f3aa0, #6761a8);
+
     /* Border Colors */
     --border-color-1: #21262d;
     --border-color-2: #292d34;
@@ -28,11 +32,11 @@
 html {
     scroll-behavior: smooth;
     color: var(--text-color-1);
-    background: var(--background-color-1);
+    background: var(--background-color-2);
 }
 
 body {
-    background-image: linear-gradient(var(--background-color-1), var(--background-color-2));
+    background-image: var(--gradient-1);
     background-size: cover;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
