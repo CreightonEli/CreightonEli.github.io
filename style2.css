@@ -216,11 +216,7 @@ section {
     justify-content: space-evenly;
     align-items: center;
     margin: 0 10%;
-}
-@media (max-width: 900px){
-    .flexContainer {
-        flex-direction: column;
-    }
+    flex-wrap: wrap;
 }
 
 /* p */
