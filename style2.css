@@ -103,15 +103,14 @@ button {
     color: var(--text-color-1);
     font-size: 12pt;
     border: 2px solid var(--border-color-2);
-    padding: 20px;
+    padding: 15px;
     border-radius: 5em;
     transition: var(--animation-delay);
-    min-width: 170px;
+    min-width: 200px;
 }
 button:hover {
     box-shadow: 0px 0px 10px var(--text-glow);
     background-image: var(--gradient-2);
-    transform: scale(105%);
     cursor: pointer;
 }
 
@@ -193,11 +192,18 @@ section {
     border-top: 2px solid var(--border-color-2);
     border-bottom: 2px solid var(--border-color-2);
 }
-@media (max-width: 1019px) {
-    section {
-        border-radius: .5em;
-        margin: 20px 20px;
-    }
+
+post {
+    background-color: var(--fill-color-3);
+    padding: 0px 12px 15px 12px;
+    margin: 20px 20px;
+    max-width: 224px;
+    border-radius: .5em;
+    transition: 325ms;
+}
+post:hover {
+    transform: translate(0px, -5px);
+    box-shadow: 0px 5px 0px 0px var(--border-color-3);
 }
 
 /* Container Div */
@@ -215,22 +221,32 @@ section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 10%;
     flex-wrap: wrap;
+    max-width: 1600px;
+    margin: 45px 20px;
+}
+@media (min-width: 1745px) {
+    .flexContainer {
+        margin: 45px auto;
+    }
 }
 
-/* p */
+/* text */
+
+h1 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 20px 11px;
+}
 
 p {
     color: var(--text-color-3);
     max-width: 90%;
     margin: 20px auto;
     font-size: 16pt;
-}
-@media (max-width: 540px){
-    p {
-        text-align: center;
-    }
 }
 
 /* horizontal rule */
