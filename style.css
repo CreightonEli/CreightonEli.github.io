@@ -291,6 +291,10 @@ svg:hover {
     text-shadow: 0px 0px 10px var(--text-glow);
     transform: scale(105%);
 }
+#adobe {
+    margin: 0px 15px 0 0;
+}
+
 
 /* Project Link styling */
 
