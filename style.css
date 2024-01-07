@@ -4,8 +4,10 @@
     --background-color-1: #0f151c;
     --background-color-2: #111418;
     --fill-color-1: #161b22;
+    --fill-color-1-op: #161b22e1;
     --fill-color-2: #21262d;
     --fill-color-3: #292d34;
+    --fill-color-3-op: #292d34af;
 
     /* Gradients */
     --gradient-1: linear-gradient(var(--background-color-1), var(--background-color-2));
@@ -36,7 +38,7 @@ html {
 }
 
 body {
-    background-image: var(--gradient-1);
+    background-image: var(--gradient-2);
     background-size: cover;
     height: 100%;
     font-family: 'Quicksand', sans-serif;
@@ -51,12 +53,18 @@ body {
     }
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1278px;
+}
+
 /* Nav Bar */
 
 nav {
     margin: 30px 0px;
     padding: 30px 0 0;
     background-color: var(--fill-color-1);
+    background-color: var(--fill-color-1-op);
     border: 2px solid var(--border-color-1);
     border-radius: 1em;
     min-width: 340px;
@@ -65,6 +73,8 @@ nav {
     nav {
         position: fixed;
         width: 33%;
+        max-width: 480px;
+        border-radius: 0em;
     }
 }
 
@@ -75,7 +85,7 @@ nav h1 {
 
 /* top section of navbar */
 .topNav {
-    border-bottom: 2px solid var(--border-color-2);
+    border-bottom: 2px solid var(--border-color-3);
     margin: 0px 0px;
     padding: 0px 20px;
     text-align: center;
@@ -98,14 +108,14 @@ nav h1 {
     display: block;
     margin: 0px 0px 0px 50px;
     padding: 5px 0px;
-    border-left: 6px double var(--border-color-1);
+    border-left: 6px double var(--border-color-3);
 }
 
 .midNav a {
     font-size: 25px;
     color: var(--text-color-2);
     text-decoration: none;
-    background: linear-gradient(to right, var(--border-color-1), var(--text-color-1)) no-repeat left bottom / 0 var(--bg-h);
+    background: linear-gradient(to right, var(--border-color-3), var(--text-color-1)) no-repeat left bottom / 0 var(--bg-h);
     transition: var(--animation-delay);
     padding-bottom: 2px;
   }
@@ -122,7 +132,7 @@ nav h1 {
 .botNav {
     text-align: center;
     padding: 10px 0;
-    border-top: 2px solid var(--border-color-2);
+    border-top: 2px solid var(--border-color-3);
 }
 .botNav a {
     display: inline-block;
@@ -138,6 +148,7 @@ nav h1 {
 
 .highlight {
     background-color: var(--fill-color-3);
+    background-color: var(--fill-color-3-op);
     border: 2px solid var(--border-color-3);
     padding: 2px 2%;
     border-radius: 2em;
@@ -173,8 +184,6 @@ nav h1 {
 
 main {
     margin: 20px 0px;
-    background-color: var(--fill-color-1);
-    border: 2px solid var(--border-color-1);
     border-radius: 1em;
     min-width: 340px;
 }
@@ -182,23 +191,22 @@ main {
     main {
         margin: 0px 0px 0px 40%;
         border-radius: 0em;
-        border-top: none;
-        border-bottom-left-radius: 1em;
-        border-bottom-right-radius: 1em;
+        border: none;
     }
 }
 
 section {
     padding: 0px 12px 15px 12px;
-    margin: 30px 0px;
-    background-color: var(--fill-color-2);
+    margin: 30px 0;
+    background-color: var(--fill-color-1);
+    background-color: var(--fill-color-1-op);
     border-top: 2px solid var(--border-color-2);
     border-bottom: 2px solid var(--border-color-2);
 }
 @media (max-width: 1019px) {
     section {
         border-radius: .5em;
-        margin: 20px 20px;
+        /* margin: 20px 20px; */
     }
 }
 #skills {
