@@ -4,8 +4,10 @@
     --background-color-1: #0f151c;
     --background-color-2: #111418;
     --fill-color-1: #161b22;
+    --fill-color-1-op: #161b22e1;
     --fill-color-2: #21262d;
     --fill-color-3: #292d34;
+    --fill-color-3-op: #292d34af;
 
     /* Border Colors */
     --border-color-1: #21262d;
@@ -21,7 +23,6 @@
     /* Gradients */
     --gradient-1: linear-gradient(var(--background-color-1), var(--background-color-2));
     --gradient-2: linear-gradient(45deg, #f26430, #8f3aa0, #6761a8);
-    --gradient-3: linear-gradient(45deg, #f26430, #8f3aa0, #6761a8);
 
     /* Animation Timers */
     --animation-delay: 355ms;
@@ -37,9 +38,9 @@ html {
 }
 
 body {
-    background-image: var(--gradient-1);
+    background-image: var(--gradient-2);
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     font-family: 'Quicksand', sans-serif;
     margin: 0px;
     display: flex;
@@ -76,11 +77,12 @@ body {
 img {
     display: inline-block;
     margin: 5px 5px;
-    width: 40%;
+    max-width: 560px;
     border: 2px solid var(--border-color-3);
-    border-radius: .5em;
+    border-radius: .2em;
     vertical-align: middle;
     background-color: var(--border-color-3);
+    background-color: var(--fill-color-3-op);
     transition: var(--animation-delay);
 }
 @media (max-width: 1020px) {
@@ -88,6 +90,16 @@ img {
         display: justify;
         width: 95%;
         margin: 5px;
+    }
+}
+@media (max-width: 1356px){
+    img {
+        max-width: 450px;
+    }
+}
+@media (max-width: 1136px){
+    img {
+        max-width: 350px;
     }
 }
 img:hover {
@@ -104,7 +116,7 @@ button {
     font-size: 12pt;
     border: 2px solid var(--border-color-2);
     padding: 15px;
-    border-radius: 5em;
+    /* border-radius: 5em; */
     transition: var(--animation-delay);
     min-width: 200px;
 }
@@ -112,10 +124,11 @@ button:hover {
     box-shadow: 0px 0px 10px var(--text-glow);
     background-image: var(--gradient-2);
     cursor: pointer;
+    border-radius: 5em;
 }
 
 #home {
-    margin: 50px 20px;
+    margin: 36px 4px;
     padding: 10px;
     min-width: 60px;
     position: fixed;
@@ -123,7 +136,7 @@ button:hover {
     color: var(--text-color-3);
     background-color: var(--fill-color-3);
     border: 2px solid var(--border-color-2);
-    border-radius: 1em;
+    /* border-radius: 1em; */
     transition: var(--animation-delay);
 }
 #home:hover {
@@ -132,19 +145,18 @@ button:hover {
     transform: scale(105%);
     cursor: pointer;
 }
-@media (max-width: 1020px) {
-    #home {
-        margin: 15px 15px;
-    }
-}
 
 /* Span */
 
 .highlight {
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
     background-color: var(--fill-color-3);
+    background-color: var(--fill-color-3-op);
     border: 2px solid var(--border-color-3);
-    padding: 2px 2%;
-    border-radius: 2em;
+    padding: 0px;
+    border-radius: 5em;
 }
 #blue-h {
     background-color: #2965f1;
@@ -177,18 +189,14 @@ button:hover {
 
 main {
     margin: 0px 0px 20px;
-    background-color: var(--fill-color-1);
-    border: 2px solid var(--border-color-1);
-    border-top: none;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
     min-width: 340px;
 }
 
 section {
     padding: 0px 12px 15px 12px;
     margin: 30px 0px;
-    background-color: var(--fill-color-2);
+    background-color: var(--fill-color-1);
+    background-color: var(--fill-color-1-op);
     border-top: 2px solid var(--border-color-2);
     border-bottom: 2px solid var(--border-color-2);
 }
@@ -209,7 +217,8 @@ post:hover {
 /* Container Div */
 
 .container {
-    margin: 0px 10%;
+    margin: 0 auto;
+    max-width: 1278px;
 }
 
 .centeredContainer {
@@ -234,7 +243,13 @@ post:hover {
 /* text */
 
 h1 {
-    font-size: 38px;
+    font-size: 42px;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 32px;
 }
 
 h3 {
