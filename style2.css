@@ -22,7 +22,7 @@
 
     /* Gradients */
     --gradient-1: linear-gradient(var(--background-color-1), var(--background-color-2));
-    --gradient-2: linear-gradient(45deg, #f26430, #8f3aa0, #6761a8);
+    --gradient-2: linear-gradient(135deg, #f26430, #8f3aa0, #6761a8);
 
     /* Animation Timers */
     --animation-delay: 355ms;

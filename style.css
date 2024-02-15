@@ -11,7 +11,7 @@
 
     /* Gradients */
     --gradient-1: linear-gradient(var(--background-color-1), var(--background-color-2));
-    --gradient-2: linear-gradient(45deg, #f26430, #8f3aa0, #6761a8);
+    --gradient-2: linear-gradient(135deg, #f26430, #8f3aa0, #6761a8);
 
     /* Border Colors */
     --border-color-1: #21262d;
@@ -29,6 +29,13 @@
 
     /* Misc Variables */
     --bg-h: 2px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-attachment: fixed;
 }
 
 html {
@@ -56,6 +63,7 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1278px;
+    z-index: 1;
 }
 
 /* Nav Bar */
@@ -96,11 +104,15 @@ nav h1 {
     margin: 0px auto 10px auto;
     border-radius: 5em;
     width: 100px;
-    transition: var(--animation-delay);
+    transition: var(--animation-delay) cubic-bezier(0.175, 0.885, 0.32, 1.75);
 }
 .avatar:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 0px 2px var(--border-color-3);
+}
+.avatar:active {
+    transition: 355ms cubic-bezier(0.175, 0.885, 0.32, 1.2);
+    transform: scale(1);
 }
 
 /* middle section of navbar */
@@ -313,14 +325,13 @@ svg:hover {
 .proj-link:hover {
     color: var(--text-color-2);
 }
-
+.proj-link:hover i {
+    color: #948de0;
+}
 .proj-link i {
     font-size: small;
     text-shadow: none;
     transform: none;
-}
-.proj-link i:hover {
-    color: #6761a8;
 }
 
 /* List */
