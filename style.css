@@ -156,6 +156,10 @@ nav h1 {
     margin-right: 0px;
 }
 
+.linkNameHidden {
+    display: none;
+}
+
 /* Span */
 
 .highlight {
@@ -230,7 +234,7 @@ section {
     border-top-color: #6761a8;
 }
 
-/* p */
+/* text */
 
 p {
     margin-left: 0px;
