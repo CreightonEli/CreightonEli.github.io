@@ -15,6 +15,7 @@ _______________________________________________________
 :root {
     /* Misc Variables */
     --bg-h: 2px;
+    --bg-angle: 0deg;
     
     /* Background Colors */
     --background-color-1: #0f151c;
@@ -81,6 +82,32 @@ body {
     z-index: 1;
 }
 
+.flexContainer {
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Text */
+h1, h2, h3, p, a {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+p {
+    font-weight: 400;
+}
+
 /* Nav Bar */
 
 .gradientBorder {
@@ -88,6 +115,9 @@ body {
     background-image: var(--gradient-3);
     height: 2px;
     margin: 0 0 30px;
+}
+.bottom {
+    margin: 10px 0 0;
 }
 
 nav {
@@ -184,6 +214,40 @@ nav h1 {
     display: none;
 }
 
+/* Sticky Nav */
+.sticky {
+    margin: 0;
+    background-color: var(--fill-color-1);
+    background-color: var(--fill-color-1-op);
+    backdrop-filter: blur(15px);
+    border-radius: 0;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 0;
+    box-shadow: 0 0 30px black;
+    z-index: 1;
+}
+.sticky img {
+    height: 52px;
+    background-color: var(--fill-color-3);
+    border-radius: 13px;
+}
+.imgBackground {
+    margin: 12px 0 0 15px;
+    padding: 2px;
+    height: 52px;
+    border-radius: 15px;
+    background-image: var(--gradient-3);
+
+}
+.flexContainer h1 {
+    margin: 26px 0 0 20px;
+    font-size: 16pt;
+}
+
 /* Span */
 
 .highlight {
@@ -232,6 +296,9 @@ main {
         margin: 0px 0px 0px 40%;
         border-radius: 0em;
         border: none;
+    }
+    .sticky {
+        display: none;
     }
 }
 
@@ -406,6 +473,12 @@ footer img {
     60% {transform: translate3d(10%,0,0) rotate(2deg) scale(1.2);}
     75% {transform: translate3d(-5%,0,0) rotate(-1deg) scale(1.1);}
     100% {transform: translateZ(0) scale(1);}
+}
+
+@keyframes spin {
+    to {
+        --bg-angle: 360deg;
+    }
 }
 
 /* 
