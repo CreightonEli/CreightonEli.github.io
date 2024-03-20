@@ -46,6 +46,11 @@ _______________________________________________________
     --animation-delay: 355ms;
 }
 
+*::selection {
+    background-color: var(--text-color-1);
+    color: var(--background-color-1);
+}
+
 canvas {
     position: fixed;
     top: 0;
@@ -295,7 +300,7 @@ i {
 }
 i:hover {
     color: var(--text-color-1);
-    text-shadow: 0px 0px 10px var(--text-glow);
+    /* text-shadow: 0px 0px 10px var(--text-glow); */
     transform: scale(105%);
 }
 #heading-i {
@@ -311,6 +316,9 @@ i:hover {
 }
 #css {
     color: #264de4;
+}
+#sass {
+    color: #cf649a;
 }
 #js {
     color: #f0db4f;
