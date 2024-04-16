@@ -47,6 +47,20 @@ _______________________________________________________
     --animation-delay: 355ms;
 }
 
+*::selection {
+    background-color: white;
+    color: #141e22;
+}
+#skills *::selection {
+    background-color: #009ddc;
+}
+#education *::selection {
+    background-color: #f26430;
+}
+#projects *::selection {
+    background-color: #6761a8;
+}
+
 canvas {
     position: fixed;
     top: 0;
@@ -217,6 +231,7 @@ nav h1 {
 /* Sticky Nav */
 .sticky {
     margin: 0;
+    display: none;
     background-color: var(--fill-color-1);
     background-color: var(--fill-color-1-op);
     backdrop-filter: blur(15px);
