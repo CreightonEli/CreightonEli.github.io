@@ -5,11 +5,11 @@ function scrollFunction() {
     if (window.innerWidth < 1020) {
         if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
             document.getElementById("mobileNav").style.display = "block";
-            // Animate mobileNav in from above window
+            // Animate mobileNav in
+            document.getElementById('mobileNav').style.animation = 'fade-in .3s forwards'
         } else {
-            // Animate mobileNav out to above window
-            // Wait until animation is done...
-            document.getElementById("mobileNav").style.display = "none";
+            // Animate mobileNav out
+            document.getElementById('mobileNav').style.animation = 'fade-out .3s forwards'
         }
     }
     else if (window.innerWidth > 1020) {
