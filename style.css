@@ -256,11 +256,56 @@ nav h1 {
     height: 52px;
     border-radius: 15px;
     background-image: var(--gradient-3);
-
+}
+.imgBackground:hover {
+    transform: scale(105%);
+    cursor: pointer;
 }
 .flexContainer h1 {
     margin: 26px 0 0 20px;
     font-size: 16pt;
+}
+#mobileNav ul {
+    margin: 16px 0 0 0;
+}
+#mobileNav li {
+    font-size: 16pt;
+    float: left;
+    margin: 9px 35px 0 0;
+}
+#mobileNav i {
+    font-size: 15pt;
+    margin: 0 6px 4px 0;
+}
+#mobileNav a {
+    text-decoration: none;
+    color: var(--text-color-1);
+}
+#mobileNav a:hover #blue {
+    color: #009ddc;
+}
+#mobileNav a:hover #orange {
+    color: #f26430;
+}
+#mobileNav a:hover #purple {
+    color: #6761a8;
+}
+#mobileNav i:hover {
+    transform: none;
+    text-shadow: none;
+}
+#mobileNav .outLinks {
+    margin: 0 -10px;
+    font-size: 24pt;
+}
+
+.mobileLinks::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -80px; 
+    height: 80px; 
+    visibility: hidden; 
+    pointer-events: none;
 }
 
 /* Span */
