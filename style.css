@@ -98,6 +98,7 @@ body {
 
 .flexContainer {
     display: flex;
+    justify-content: space-between;
     margin: 0 auto;
 }
 
@@ -130,8 +131,12 @@ p {
     height: 2px;
     margin: 0 0 30px;
 }
-.bottom {
-    margin: 10px 0 0;
+.gradientBorder.bottom {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    transition: 355ms ease-in-out;
 }
 
 nav {
@@ -244,6 +249,12 @@ nav h1 {
     border: 0;
     box-shadow: 0 0 30px black;
     z-index: 1;
+    transition: 355ms ease-in-out;
+}
+@media (min-width: 1020px){
+    .sticky {
+        display: none;
+    }
 }
 .sticky img {
     height: 52px;
@@ -265,13 +276,10 @@ nav h1 {
     margin: 26px 0 0 20px;
     font-size: 16pt;
 }
-#mobileNav ul {
-    margin: 16px 0 0 0;
-}
 #mobileNav li {
     font-size: 16pt;
     float: left;
-    margin: 9px 35px 0 0;
+    margin: 9px 35px -7px 0;
 }
 #mobileNav i {
     font-size: 15pt;
@@ -294,9 +302,74 @@ nav h1 {
     transform: none;
     text-shadow: none;
 }
-#mobileNav .outLinks {
+#mobileNav .outLink {
     margin: 0 -10px;
     font-size: 24pt;
+}
+
+#menuOpen {
+    display: none;
+    padding: 0 40px 0 40px;
+}
+
+#mobileNav .blockList {
+    display: none;
+}
+#mobileNav .blockList li {
+    display: block;
+    float: none;
+}
+
+#mobileNav .inlineList {
+    display: none;
+}
+#mobileNav .inlineList li i {
+    display: block;
+    float: left;
+    font-size: 30pt;
+}
+
+#menuOpen hr {
+    display: none;
+}
+
+#hamburger {
+    cursor: pointer;
+    width: 29px;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    #outLinkList {
+        display: none;
+    }
+
+    #mobileNav .inlineList {
+        display: block;
+        height: 54px;
+        list-style-type: none;
+        padding: 0 0 0 30px;
+    }
+    
+    #mobileNav .fa-bars, #mobileNav .fa-x {
+        display: inline;
+        margin: 25px 20px 0 0;
+        font-size: 25pt;
+    }
+}
+@media (max-width: 575px) {
+    #inLinkList {
+        display: none;
+    }
+
+    #mobileNav .blockList {
+        display: block;
+        list-style-type: none;
+        padding: 0 0 0 24px;
+    }
+    #menuOpen hr {
+        display: block;
+    }
 }
 
 .mobileLinks::before { 
@@ -356,9 +429,6 @@ main {
         margin: 0px 0px 0px 40%;
         border-radius: 0em;
         border: none;
-    }
-    .sticky {
-        display: none;
     }
 }
 
@@ -541,7 +611,7 @@ footer img {
     }
 }
 
-@keyframes fade-in {
+@keyframes slide-in {
     0% {
       opacity: 0;
       transform: translate(0, -80px);
@@ -551,7 +621,7 @@ footer img {
     }
   }
 
-  @keyframes fade-out {
+  @keyframes slide-out {
     0% {
       opacity: 1;
     }

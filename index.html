@@ -50,20 +50,36 @@
                     </a>
                 </div>
             </nav>
+            <!-- Mobile Sticky Nav Bar -->
             <nav class="sticky" id="mobileNav">
                 <div class="flexContainer">
                     <div class="imgBackground">
                         <img src="favicon_package_v0.16/android-chrome-192x192.png" alt="Website logo">
                     </div>
-                    <ul>
+                    <ul id="inLinkList">
                         <li><a href="#skillsMob"><i class="fa fa-code" id="blue"></i>Skills</a></li>
                         <li><a href="#educationMob"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
                         <li><a href="#projectsMob"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
                     </ul>
-                    <ul>
-                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square outLinks"></i></a></li>
-                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square outLinks"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin outLinks"></i></a></li>
+                    <ul id="outLinkList">
+                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square outLink"></i></a></li>
+                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square outLink"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin outLink"></i></a></li>
+                    </ul>
+                    <i class="fa-solid fa-bars" id="hamburger" onclick="hamburgerMenu()"></i>
+                </div>
+                <!-- Drop down menu for even smaller screens -->
+                <div id="menuOpen">
+                    <ul class="blockList">
+                        <li><a href="#skillsMob"><i class="fa fa-code" id="blue"></i>Skills</a></li>
+                        <li><a href="#educationMob"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
+                        <li><a href="#projectsMob"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
+                    </ul>
+                    <hr>
+                    <ul class="inlineList">
+                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square outLink"></i></a></li>
+                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square outLink"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin outLink"></i></a></li>
                     </ul>
                 </div>
                 <div class="gradientBorder bottom"></div>
