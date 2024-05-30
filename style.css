@@ -238,6 +238,7 @@ nav h1 {
     display: none;
     background-color: var(--fill-color-1);
     background-color: var(--fill-color-1-op);
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     border-radius: 0;
     width: 100%;
