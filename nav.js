@@ -2,6 +2,7 @@ const hamburgerBtn = document.querySelector("#hamburger")
 const menuOpen = document.querySelector("menuOpen")
 
 function hamburgerMenu() {
+    // if closed then open
     if (hamburgerBtn.classList.contains("fa-bars")) {
         hamburgerBtn.classList.remove("fa-bars")
         hamburgerBtn.classList.add("fa-x")
@@ -16,6 +17,7 @@ function hamburgerMenu() {
             document.querySelector("#menuOpen").style.display = "block";    
         }
     }
+    // else close
     else {
         hamburgerBtn.classList.remove("fa-x")
         hamburgerBtn.classList.add("fa-bars")
