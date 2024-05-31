@@ -102,8 +102,17 @@ body {
 }
 
 /* Text */
-h1, h2, h3, p, a {
+h1, h2, h3, p {
     font-family: "Open Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #948de0;
+    transition: 355ms;
+}
+a:hover {
+    color: #beb8ff;
 }
 
 h1 {
