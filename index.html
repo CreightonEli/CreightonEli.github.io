@@ -34,9 +34,9 @@
                     </p>
                 </div>
                 <div class="midNav">
-                    <p><a href="#skills">&emsp;Skills</a></p>
-                    <p><a href="#education">&emsp;Education</a></p>
-                    <p><a href="#projects">&emsp;Projects</a></p>
+                    <p><a href="#skillsMob">&emsp;Skills</a></p>
+                    <p><a href="#educationMob">&emsp;Education</a></p>
+                    <p><a href="#projectsMob">&emsp;Projects</a></p>
                     <p><a href="documents/ElijahCResume.pdf" target="_blank">&emsp;Resume</a></p>
                 </div>
                 <div class="botNav">
@@ -72,11 +72,11 @@
                 <!-- Drop down menu for even smaller screens -->
                 <div id="menuOpen">
                     <ul class="blockList">
-                        <li><a href="#skillsMob"><i class="fa fa-code" id="blue"></i>Skills</a></li>
-                        <li><a href="#educationMob"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
-                        <li><a href="#projectsMob"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
+                        <li><a href="#skillsMob" onclick="hamburgerMenu()"><i class="fa fa-code" id="blue"></i>Skills</a></li>
+                        <li><a href="#educationMob" onclick="hamburgerMenu()"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
+                        <li><a href="#projectsMob" onclick="hamburgerMenu()"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
                     </ul>
-                    <hr>
+                    
                     <ul class="inlineList">
                         <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square outLink"></i></a></li>
                         <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square outLink"></i></a></li>
@@ -127,106 +127,184 @@
                 <section id="projects">
                     <h2><span class="highlight" id="projects-h"><i class="fa-solid fa-mug-hot" id="heading-i"></i>Projects</span></h2>
 
-                    <h3>CreightonEli.github.io</h3>
-                    <p>
-                        I utilized my skills with HTML, CSS, and JavaScript to develop my own online portfolio where 
-                        I can better showcase my work. I plan for this site to be steadily built upon as 
-                        I continue to grow my knowledge of this field.
-                    </p>
-                    <a href="https://github.com/CreightonEli/CreightonEli.github.io" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/creightoneli.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/creightoneli.png" alt="Desktop screenshot of this website">
+                                </a>
+                            </div>
+                        </div>
+                        <h3>CreightonEli.github.io</h3>
+                        <p>
+                            I utilized my skills with HTML, CSS, and JavaScript to develop my own online portfolio where 
+                            I can better showcase my work. I plan for this site to be steadily built upon as 
+                            I continue to grow my knowledge of this field.
+                        </p>
+                        <a href="https://github.com/CreightonEli/CreightonEli.github.io" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    </div>
+                    
+                    
 
-                    <hr>
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/blackjack.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/blackjack.png" alt="Desktop screenshot my blackjack game. I just lost. :(">
+                                </a>
+                            </div>
+                        </div>
+                        <h3>
+                            <a href="https://creightoneli.github.io/Blackjack/" class="proj-link">Blackjack Game <i class="fa fa-link"></i></a>
+                        </h3>
+                        <p>
+                            Made with HTML, SCSS, JavaScript, and the <a href="https://deckofcardsapi.com/" target="_blank">Deck of Cards API</a> by Chase Roberts.
+                            <br><br>
+                            I love playing card games. So, I decided to challenge myself to create one of these games for the web.
+                        </p>
+                        <a href="https://github.com/CreightonEli/Blackjack" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    </div>
 
-                    <h3>
-                        <a href="https://creightoneli.github.io/Blackjack/" class="proj-link">Blackjack Game <i class="fa fa-link"></i></a>
-                    </h3>
-                    <p>
-                        Made with HTML, SCSS, JavaScript, and the <a href="https://deckofcardsapi.com/" target="_blank">Deck of Cards API</a> by Chase Roberts.
-                        <br><br>
-                        I love playing card games. So, I decided to challenge myself to create one of these games for the web.
-                    </p>
-                    <a href="https://github.com/CreightonEli/Blackjack" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    
 
-                    <hr>
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/zarete.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/zarete.png" alt="Desktop screenshot of Zarete's landing page.">
+                                </a>
+                            </div>
+                        </div>
+                        <h3>
+                            <a href="https://zarete.com" class="proj-link">Zaréte Online Store <i class="fa fa-link"></i></a>
+                        </h3>
+                        <p>
+                            Starting from my own initial design files to gauge the desired look of the site, I worked with 
+                            a team to develop the front end of Zaréte’s online store utilizing Odoo.
+                        </p>
+                    </div>
 
-                    <h3>
-                        <a href="https://zarete.com" class="proj-link">Zaréte Online Store <i class="fa fa-link"></i></a>
-                    </h3>
-                    <p>
-                        Starting from my own initial design files to gauge the desired look of the site, I worked with 
-                        a team to develop the front end of Zaréte’s online store utilizing Odoo.
-                    </p>
-                                    
-                    <hr>
                     
-                    <h3>
-                        <a href="https://creightoneli.github.io/Advice-Generator-App-FEM" class="proj-link">Advice Generator App <i class="fa fa-link"></i></a>
-                    </h3>
-                    <p>
-                        I took on a challenge from Frontend Mentor to create an app utilizing the Slip Advice API, making sure it 
-                        resembles the design files they provided as closely as possible. I used my eye for detail to be certain the 
-                        code was pixel perfect.
-                        <br><br>
-                        The app itself generates a random short piece of advice from the Slip Advice API with the press of a button.
-                    </p>
-                    <a href="https://github.com/CreightonEli/Advice-Generator-App-FEM" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
                     
-                    <hr>
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/advice-gen.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/advice-gen.png" alt="Desktop screenshot of the advice generator app.">
+                                </a>
+                            </div>
+                        </div>    
+                        <h3>
+                            <a href="https://creightoneli.github.io/Advice-Generator-App-FEM" class="proj-link">Advice Generator App <i class="fa fa-link"></i></a>
+                        </h3>
+                        <p>
+                            I took on a challenge from Frontend Mentor to create an app utilizing the Slip Advice API, making sure it 
+                            resembles the design files they provided as closely as possible. I used my eye for detail to be certain the 
+                            code was pixel perfect.
+                            <br><br>
+                            The app itself generates a random short piece of advice from the Slip Advice API with the press of a button.
+                        </p>
+                        <a href="https://github.com/CreightonEli/Advice-Generator-App-FEM" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    </div>
+
                     
-                    <h3>
-                        <a href="https://creightoneli.github.io/Prototype-Band-Site" class="proj-link">Prototype Band Site <i class="fa fa-link"></i></a>
-                    </h3>
-                    <p>
-                        I had to utilize various skills in HTML, CSS, and JavaScript, as well as 
-                        Adobe Photoshop for some of the photo assets to make them better suited for the web.
-                        <br><br>
-                        The site is still in the early stages of development but looks very promising and I'm very 
-                        happy with the functionality that it already has.
-                    </p>
-                    <a href="https://github.com/CreightonEli/Prototype-Band-Site" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
                     
-                    <hr>
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/band-site.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/band-site.png" alt="Desktop screenshot of the band site landing page.">
+                                </a>
+                            </div>
+                        </div>    
+                        <h3>
+                            <a href="https://creightoneli.github.io/Prototype-Band-Site" class="proj-link">Prototype Band Site <i class="fa fa-link"></i></a>
+                        </h3>
+                        <p>
+                            I had to utilize various skills in HTML, CSS, and JavaScript, as well as 
+                            Adobe Photoshop for some of the photo assets to make them better suited for the web.
+                            <br><br>
+                            The site is still in the early stages of development but looks very promising and I'm very 
+                            happy with the functionality that it already has.
+                        </p>
+                        <a href="https://github.com/CreightonEli/Prototype-Band-Site" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    </div>
                     
-                    <h3><a href="https://creightoneli.github.io/HTML-Canvas-Test" class="proj-link">HTML Canvas Test <i class="fa fa-link"></i></a></h3>
-                    <p>
-                        I created a very interactive and responsive effect with JavaScript and the use of HTML5's canvas
-                        element. I had been meaning to learn more about canvas, so it served as an excellent learning
-                        opportunity. It also allowed me to brush up a bit on my JavaScript.
-                        <br><br>
-                        I actually liked the final effect so much that I incorporated it into the background of this site.
-                    </p>
-                    <a href="https://github.com/CreightonEli/HTML-Canvas-Test" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
                     
-                    <hr>
+
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/canvas.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/canvas.png" alt="Desktop screenshot of the javascript canvas test page.">
+                                </a>
+                            </div>
+                        </div>    
+                        <h3><a href="https://creightoneli.github.io/HTML-Canvas-Test" class="proj-link">HTML Canvas Test <i class="fa fa-link"></i></a></h3>
+                        <p>
+                            I created a very interactive and responsive effect with JavaScript and the use of HTML5's canvas
+                            element. I had been meaning to learn more about canvas, so it served as an excellent learning
+                            opportunity. It also allowed me to brush up a bit on my JavaScript.
+                            <br><br>
+                            I actually liked the final effect so much that I incorporated it into the background of this site.
+                        </p>
+                        <a href="https://github.com/CreightonEli/HTML-Canvas-Test" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    </div>
+
                     
-                    <h3><a href="https://creightoneli.github.io/Neobrutalism" class="proj-link">Neobrutalist Component <i class="fa fa-link"></i></a></h3>
-                    <p>
-                        I kept seeing this style appear online in various web development forums and finally decided I'd
-                        take a crack at replicating it. This was more of an exercise of my CSS muscles. The final effect
-                        utilizes CSS's flex capabilities to create a beautiful, interactive, responsive, and modular card template.
-                    </p>
-                    <a href="https://github.com/CreightonEli/Neobrutalism" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
                     
-                    <hr>
-                    
-                    <h3><a href="USFGo-To.html" class="proj-link">USF Go-To Designs <i class="fa fa-link"></i></a></h3>
-                    <p>
-                        I worked with a team to design multiple low and high-fidelity
-                        wireframes in Balsamiq for a website that would promote events and
-                        blog posts related to health and wellness activities around USF’s
-                        campuses.
-                    </p>
-                    
-                    <hr>
-                    
-                    <h3>DF Language Translator</h3>
-                    <p>
-                        I developed a program using Java SE and Swing that would translate 
-                        English into a fictional language from the simulation game Dwarf 
-                        Fortress. I am currently working on a browser version of the
-                        application in my free time.
-                    </p>
-                    <a href="https://github.com/CreightonEli/DF-Dwarven-Translator" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/neobrutalism.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/neobrutalism.png" alt="Desktop screenshot of the neobrutalist component page.">
+                                </a>
+                            </div>
+                        </div>
+                        <h3><a href="https://creightoneli.github.io/Neobrutalism" class="proj-link">Neobrutalist Component <i class="fa fa-link"></i></a></h3>
+                        <p>
+                            I kept seeing this style appear online in various web development forums and finally decided I'd
+                            take a crack at replicating it. This was more of an exercise of my CSS muscles. The final effect
+                            utilizes CSS's flex capabilities to create a beautiful, interactive, responsive, and modular card template.
+                        </p>
+                        <a href="https://github.com/CreightonEli/Neobrutalism" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/projects/dorf.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/projects/dorf.png" alt="A screenshot of the window for the Dwarf Fortress Translator App I made in Java. The words 'cat bear' are currently being translated.">
+                                </a>
+                            </div>
+                        </div>    
+                        <h3>DF Language Translator</h3>
+                        <p>
+                            I developed a program using Java SE and Swing that would translate 
+                            English into a fictional language from the simulation game Dwarf 
+                            Fortress. I am currently working on a browser version of the
+                            application in my free time.
+                        </p>
+                        <a href="https://github.com/CreightonEli/DF-Dwarven-Translator" class="proj-link"><i class="fa-brands fa-github"></i>Repository</a>
+                    </div>
+
+                    <div class="project no-border">
+                        <h3><a href="USFGo-To.html" class="proj-link">USF Go-To Designs <i class="fa fa-link"></i></a></h3>
+                        <p>
+                            I worked with a small team of fellow students to design multiple low and high-fidelity
+                            wireframes in Balsamiq for a website that would promote events and
+                            blog posts related to health and wellness activities around USF’s
+                            campuses.
+                        </p>
+                    </div>
                 </section>
             </main>
         </div>
