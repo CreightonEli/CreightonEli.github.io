@@ -54,7 +54,7 @@ class FlowFieldEffect {
         this.vr = 0.006;
     }
     #createGradient(){
-        this.gradient = this.#ctx.createLinearGradient(0, 0, this.#width, this.#height);
+        this.gradient = this.#ctx.createLinearGradient(0, this.#height, this.#width, 0);
         this.gradient.addColorStop("0.1","#ff5c33");
         this.gradient.addColorStop("0.2","#ff66b3");
         this.gradient.addColorStop("0.4","#ccccff00");

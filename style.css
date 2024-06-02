@@ -28,7 +28,7 @@ _______________________________________________________
     /* Gradients */
     /* --gradient-1: linear-gradient(var(--background-color-1), var(--background-color-2)); */
     --gradient-1: linear-gradient(to right, var(--border-color-3), var(--text-color-1)) no-repeat left bottom / 0 var(--bg-h);
-    --gradient-2: linear-gradient(135deg, #f26430, #8f3aa0, #6761a8);
+    --gradient-2: linear-gradient(88deg, #f26430, #8f3aa0, #6761a8);
     --gradient-3: linear-gradient(to right, #ff4c0b, #bc32d8, #6e62e9);
 
     /* Border Colors */
@@ -330,6 +330,7 @@ nav h1 {
 #mobileNav .blockList li {
     display: block;
     float: none;
+    margin: 0 0 12px;
 }
 
 #mobileNav .inlineList {
