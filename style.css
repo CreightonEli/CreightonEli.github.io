@@ -76,12 +76,12 @@ html {
 body {
     background-image: var(--gradient-2);
     background-size: cover;
-    height: 100%;
     font-family: 'Quicksand', sans-serif;
     margin: 0px;
     display: flex;
     flex-direction: column;
     padding: 0px 40px;
+    min-height: 100vh;
 }
 @media (max-width: 1020px) {
     body {
@@ -95,10 +95,25 @@ body {
     z-index: 1;
 }
 
-.flexContainer {
+.right-container {
+    margin: 0 auto;
+    max-width: 1278px;
+    z-index: 1;
+}
+
+.flex-container {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+}
+.flex-container.inline {
+    max-width: 1278px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-container.inline .project-images {
+    margin: 5px auto;
+    max-width: 360px;
 }
 
 /* Text */
@@ -134,13 +149,13 @@ p {
 
 /* Nav Bar */
 
-.gradientBorder {
+.gradient-border {
     background-color: var(--text-color-2);
     background-image: var(--gradient-3);
     height: 2px;
     margin: 0 0 30px;
 }
-.gradientBorder.bottom {
+.gradient-border.bottom {
     margin: 0;
     position: absolute;
     width: 100%;
@@ -166,6 +181,9 @@ nav {
         max-width: 480px;
         border-radius: 0em;
     }
+    nav#mobile-nav {
+        max-width: 100%;
+    }
 }
 
 nav h1 {
@@ -174,7 +192,7 @@ nav h1 {
 }
 
 /* top section of navbar */
-.topNav {
+.top-nav {
     border-bottom: 2px solid var(--border-color-3);
     margin: 0px 0px;
     padding: 0px 20px;
@@ -198,14 +216,14 @@ nav h1 {
 }
 
 /* middle section of navbar */
-.midNav {
+.mid-nav {
     display: block;
     margin: 0px 0px 0px 50px;
     padding: 5px 0px;
     border-left: 6px double var(--border-color-3);
 }
 
-.midNav a {
+.mid-nav a {
     font-size: 25px;
     color: var(--text-color-2);
     text-decoration: none;
@@ -213,32 +231,32 @@ nav h1 {
     transition: var(--animation-delay);
     padding-bottom: 2px;
   }
-.midNav a:hover {
+.mid-nav a:hover {
     color: var(--text-color-1);
 }
-.midNav a:where(:hover, :focus-visible) {
+.mid-nav a:where(:hover, :focus-visible) {
     color: var(--text-color-1);
     background-size: 100% var(--bg-h);
     background-position-x: left;
 }
 
 /* bottom section of navbar */
-.botNav {
+.bot-nav {
     text-align: center;
     padding: 10px 0;
     border-top: 2px solid var(--border-color-3);
 }
-.botNav a {
+.bot-nav a {
     display: inline-block;
     padding: 0px 8px;
     color: var(--text-color-2);
     transition: var(--animation-delay);
 }
-.botNav i {
+.bot-nav i {
     margin-right: 0px;
 }
 
-.linkNameHidden {
+.link-name-hidden {
     display: none;
 }
 
@@ -261,6 +279,9 @@ nav h1 {
     z-index: 1;
     transition: 355ms ease-in-out;
 }
+.sticky.stay {
+    display: block;
+}
 @media (min-width: 1020px){
     .sticky {
         display: none;
@@ -271,7 +292,7 @@ nav h1 {
     background-color: var(--fill-color-3);
     border-radius: 13px;
 }
-.imgBackground {
+.img-background {
     margin: 12px 0 0 15px;
     padding: 2px;
     height: 52px;
@@ -279,70 +300,73 @@ nav h1 {
     background-image: var(--gradient-3);
     transition: 355ms ease-in-out;
 }
-.imgBackground:hover {
+.img-background:hover {
     transform: scale(105%);
     cursor: pointer;
 }
-.flexContainer h1 {
+.flex-container h1 {
     margin: 26px 0 0 20px;
     font-size: 16pt;
 }
-#mobileNav li {
+#mobile-nav li {
     font-size: 16pt;
     float: left;
     margin: 9px 35px -7px 0;
 }
-#mobileNav i {
+#mobile-nav i {
     font-size: 15pt;
     margin: 0 6px 4px 0;
 }
-#mobileNav a {
+#mobile-nav a {
     text-decoration: none;
     color: var(--text-color-1);
 }
-#mobileNav a:hover #blue {
+#mobile-nav a:hover #blue {
     color: #009ddc;
 }
-#mobileNav a:hover #orange {
+#mobile-nav a:hover #orange {
     color: #f26430;
 }
-#mobileNav a:hover #purple {
+#mobile-nav a:hover #purple {
     color: #6761a8;
 }
-#mobileNav i:hover {
+#mobile-nav i:hover {
     transform: none;
     text-shadow: none;
 }
-#mobileNav .outLink {
+#in-link-list {
+    margin: auto 0;
+}
+#mobile-nav .out-link {
     margin: 0 -10px;
     font-size: 24pt;
 }
 
-#menuOpen {
+#menu-open {
     display: none;
     padding: 0 40px 0 40px;
     animation: fade-in 200ms 355ms both;
 }
 
-#mobileNav .blockList {
+#mobile-nav .block-list {
     display: none;
 }
-#mobileNav .blockList li {
+#mobile-nav .block-list li {
     display: block;
     float: none;
     margin: 0 0 12px;
 }
 
-#mobileNav .inlineList {
+#mobile-nav .inline-list {
     display: none;
 }
-#mobileNav .inlineList li i {
+#mobile-nav .inline-list li i {
     display: block;
     float: left;
     font-size: 30pt;
 }
 
-#menuOpen hr {
+#menu-open hr {
     display: none;
 }
 
@@ -353,39 +377,40 @@ nav h1 {
 }
 
 @media (max-width: 700px) {
-    #outLinkList {
+    #out-link-list {
         display: none;
     }
 
-    #mobileNav .inlineList {
+    #mobile-nav .inline-list {
         display: block;
         height: 54px;
         list-style-type: none;
         padding: 0 0 0 30px;
     }
     
-    #mobileNav .fa-bars, #mobileNav .fa-x {
+    #mobile-nav .fa-bars, #mobile-nav .fa-x {
         display: inline;
         margin: 25px 20px 0 0;
         font-size: 25pt;
     }
 }
+
 @media (max-width: 575px) {
-    #inLinkList {
+    #in-link-list {
         display: none;
     }
 
-    #mobileNav .blockList {
+    #mobile-nav .block-list {
         display: block;
         list-style-type: none;
         padding: 0 0 0 24px;
     }
-    #menuOpen hr {
+    #menu-open hr {
         display: block;
     }
 }
 
-.mobileLinks::before { 
+.mobile-links::before { 
     display: block; 
     content: " "; 
     margin-top: -80px; 
@@ -436,6 +461,10 @@ main {
     margin: 20px 0px;
     border-radius: 1em;
     min-width: 340px;
+    max-width: 1278px;
+}
+main.centered {
+    margin: 100px auto 0;
 }
 @media (min-width: 1020px){
     main {
@@ -446,6 +475,7 @@ main {
 }
 
 section {
+    max-width: 1278px;
     padding: 0px 12px 15px 12px;
     margin: 15px 0;
     background-color: var(--fill-color-1);

@@ -2,42 +2,169 @@
 <html>
     <head>
         <title>USF Go-To Wireframes</title>
-        <link rel="stylesheet" type="text/css" href="style2.css">
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- favicon -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <!-- icons -->
         <script src="https://kit.fontawesome.com/9ec2ea49d6.js" crossorigin="anonymous"></script>
+        <!-- metadata -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="USF Go-To project prototype page. View low and high fidelity wireframes here.">
+        <!-- scripts -->
+        <script src="canvas.js" defer></script>
+        <script src="nav.js" defer></script>
     </head>
-
     <body>
+        <canvas id="canvas"></canvas>
         <div class="container">
-            <a href="https://creightoneli.github.io"><button id="home"><i class="fa fa-home"></i></button></a>
-            <main>
-                <section>
-                    <div class="centeredContainer">
-                        <h2>Low-Fidelity Wireframes</h2>
-                        <hr>
-                        <a href="images/LFHome.png"><img src="images/LFHome.png"></a>
-                        <a href="images/LFEvents.png"><img src="images/LFEvents.png"></a>
-                        <a href="images/LFHealth&Wellness.png"><img src="images/LFHealth&Wellness.png"></a>
-                        <a href="images/LFAboutUs.png"><img src="images/LFAboutUs.png"></a>
-                        <a href="images/LFContactUs.png"><img src="images/LFContactUs.png"></a>
-                        <a href="images/LFAccount.png"><img src="images/LFAccount.png"></a>
+            <!-- sticky nav -->
+            <nav class="sticky stay" id="mobile-nav">
+                <div class="flex-container inline">
+                    <div class="img-background">
+                        <a href="https://creightoneli.github.io/">
+                            <img src="favicon_package_v0.16/android-chrome-192x192.png" alt="Website logo">
+                        </a>
+                    </div>
+                    <ul id="in-link-list">
+                        <li><a href="https://creightoneli.github.io/#skillsMob"><i class="fa fa-code" id="blue"></i>Skills</a></li>
+                        <li><a href="https://creightoneli.github.io/#educationMob"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
+                        <li><a href="https://creightoneli.github.io/#projectsMob"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
+                    </ul>
+                    <ul id="out-link-list">
+                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square out-link"></i></a></li>
+                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square out-link"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin out-link"></i></a></li>
+                    </ul>
+                    <i class="fa-solid fa-bars" id="hamburger" onclick="hamburgerMenu()"></i>
+                </div>
+                <!-- Drop down menu for even smaller screens -->
+                <div id="menu-open">
+                    <ul class="block-list">
+                        <li><a href="https://creightoneli.github.io/#skillsMob" onclick="hamburgerMenu()"><i class="fa fa-code" id="blue"></i>Skills</a></li>
+                        <li><a href="https://creightoneli.github.io/#educationMob" onclick="hamburgerMenu()"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
+                        <li><a href="https://creightoneli.github.io/#projectsMob" onclick="hamburgerMenu()"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
+                    </ul>
+                    
+                    <ul class="inline-list">
+                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square out-link"></i></a></li>
+                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square out-link"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin out-link"></i></a></li>
+                    </ul>
+                </div>
+                <div class="gradient-border bottom"></div>
+            </nav>
+            <main class="centered">
+                <section style="text-align: center;">
+                    <h2>Low-Fidelity Wireframes</h2>
+                    <hr>
+                    <div class="flex-container inline">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/LFHome.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/LFHome.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/LFEvents.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/LFEvents.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/LFHealth&Wellness.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/LFHealth&Wellness.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/LFAboutUs.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/LFAboutUs.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/LFContactUs.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/LFContactUs.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/LFAccount.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/LFAccount.png" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
-                <section>
-                    <div class="centeredContainer">
-                        <h2>High-Fidelity Wireframes</h2>
-                        <hr>
-                        <a href="images/HFHome.png"><img src="images/HFHome.png"></a>
-                        <a href="images/HFEvents.png"><img src="images/HFEvents.png"></a>
-                        <a href="images/HFHealth&Wellness.png"><img src="images/HFHealth&Wellness.png"></a>
-                        <a href="images/HFAboutUs.png"><img src="images/HFAboutUs.png"></a>
-                        <a href="images/HFContactUs.png"><img src="images/HFContactUs.png"></a>
-                        <a href="images/HFAccount.png"><img src="images/HFAccount.png"></a>
+                <section style="text-align: center;">
+                    <h2>High-Fidelity Wireframes</h2>
+                    <hr>
+                    <div class="flex-container inline">
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/HFHome.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/HFHome.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/HFEvents.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/HFEvents.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/HFHealth&Wellness.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/HFHealth&Wellness.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/HFAboutUs.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/HFAboutUs.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/HFContactUs.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/HFContactUs.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-images">
+                            <div class="project-img-container">
+                                <a href="images/HFAccount.png" target="_blank">
+                                    <p>View full image<i class="fa-solid fa-image"></i></p>
+                                    <img src="images/HFAccount.png" alt="">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>

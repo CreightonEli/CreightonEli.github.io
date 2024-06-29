@@ -17,77 +17,79 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">        <script src="https://kit.fontawesome.com/9ec2ea49d6.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Elijah Creighton's online web development portfolio. Creating beautiful, responsive, and engaging web experiences.">
+        <meta name="google-site-verification" content="8dNIyhw0w1XJ_i6vMBxSEjfQ7159eY9hzrtjSvcVAtI" />
         <script src="canvas.js" defer></script>
         <script src="nav.js" defer></script>
-        <meta name="google-site-verification" content="8dNIyhw0w1XJ_i6vMBxSEjfQ7159eY9hzrtjSvcVAtI" />
     </head>
     <body>
-        <canvas id="canvas1"></canvas>
-        <div class="container">
+        <canvas id="canvas"></canvas>
+        <div class="right-container">
             <nav>
-                <div class="gradientBorder"></div>
-                <div class="topNav">
+                <div class="gradient-border"></div>
+                <div class="top-nav">
                     <img class="avatar" src="images/avatar.jpg" alt="">
                     <h1>Elijah Creighton</h1>
                     <p>
                         A web developer and <span id="usf-h" class="highlight">USF</span> graduate with the desire to create responsive, memorable web experiences. 
                     </p>
                 </div>
-                <div class="midNav">
-                    <p><a href="#skillsMob">&emsp;Skills</a></p>
-                    <p><a href="#educationMob">&emsp;Education</a></p>
-                    <p><a href="#projectsMob">&emsp;Projects</a></p>
+                <div class="mid-nav">
+                    <p><a href="#skills-mob">&emsp;Skills</a></p>
+                    <p><a href="#education-mob">&emsp;Education</a></p>
+                    <p><a href="#projects-mob">&emsp;Projects</a></p>
                     <p><a href="documents/ElijahCResume.pdf" target="_blank">&emsp;Resume</a></p>
                 </div>
-                <div class="botNav">
+                <div class="bot-nav">
                     <a href="mailto:elijahcreighton@gmail.com">
-                        <i class="fa fa-envelope-square"></i><span class="linkNameHidden">Contact me via email</span>
+                        <i class="fa fa-envelope-square"></i><span class="link-name-hidden">Contact me via email</span>
                     </a>
                     <a target="_blank" href="https://github.com/CreightonEli">
-                        <i class="fa-brands fa-github-square"></i><span class="linkNameHidden">Link to GitHub account page</span>
+                        <i class="fa-brands fa-github-square"></i><span class="link-name-hidden">Link to GitHub account page</span>
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/in/creightone">
-                        <i class="fa-brands fa-linkedin"></i><span class="linkNameHidden">Link to LinkedIn account page</span>
+                        <i class="fa-brands fa-linkedin"></i><span class="link-name-hidden">Link to LinkedIn account page</span>
                     </a>
                 </div>
             </nav>
             <!-- Mobile Sticky Nav Bar -->
-            <nav class="sticky" id="mobileNav">
-                <div class="flexContainer">
-                    <div class="imgBackground">
-                        <img src="favicon_package_v0.16/android-chrome-192x192.png" alt="Website logo">
+            <nav class="sticky" id="mobile-nav">
+                <div class="flex-container">
+                    <div class="img-background">
+                        <a href="https://creightoneli.github.io/">
+                            <img src="favicon_package_v0.16/android-chrome-192x192.png" alt="Website logo">
+                        </a>
                     </div>
-                    <ul id="inLinkList">
-                        <li><a href="#skillsMob"><i class="fa fa-code" id="blue"></i>Skills</a></li>
-                        <li><a href="#educationMob"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
-                        <li><a href="#projectsMob"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
+                    <ul id="in-link-list">
+                        <li><a href="#skills-mob"><i class="fa fa-code" id="blue"></i>Skills</a></li>
+                        <li><a href="#education-mob"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
+                        <li><a href="#projects-mob"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
                     </ul>
-                    <ul id="outLinkList">
-                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square outLink"></i></a></li>
-                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square outLink"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin outLink"></i></a></li>
+                    <ul id="out-link-list">
+                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square out-link"></i></a></li>
+                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square out-link"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin out-link"></i></a></li>
                     </ul>
                     <i class="fa-solid fa-bars" id="hamburger" onclick="hamburgerMenu()"></i>
                 </div>
                 <!-- Drop down menu for even smaller screens -->
-                <div id="menuOpen">
-                    <ul class="blockList">
-                        <li><a href="#skillsMob" onclick="hamburgerMenu()"><i class="fa fa-code" id="blue"></i>Skills</a></li>
-                        <li><a href="#educationMob" onclick="hamburgerMenu()"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
-                        <li><a href="#projectsMob" onclick="hamburgerMenu()"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
+                <div id="menu-open">
+                    <ul class="block-list">
+                        <li><a href="#skills-mob" onclick="hamburgerMenu()"><i class="fa fa-code" id="blue"></i>Skills</a></li>
+                        <li><a href="#education-mob" onclick="hamburgerMenu()"><i class="fa-solid fa-book" id="orange"></i>Education</a></li>
+                        <li><a href="#projects-mob" onclick="hamburgerMenu()"><i class="fa-solid fa-mug-hot" id="purple"></i>Projects</a></li>
                     </ul>
                     
-                    <ul class="inlineList">
-                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square outLink"></i></a></li>
-                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square outLink"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin outLink"></i></a></li>
+                    <ul class="in-line-list">
+                        <li><a href="mailto:elijahcreighton@gmail.com"><i class="fa fa-envelope-square out-link"></i></a></li>
+                        <li><a href="https://github.com/CreightonEli"><i class="fa-brands fa-github-square out-link"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/creightone"><i class="fa-brands fa-linkedin out-link"></i></a></li>
                     </ul>
                 </div>
-                <div class="gradientBorder bottom"></div>
+                <div class="gradient-border bottom"></div>
             </nav>
             <main>
                 <!-- Skills Section -->
-                <div class="mobileLinks" id="skillsMob"></div>
+                <div class="mobile-links" id="skills-mob"></div>
                 <section id="skills">
                     <h2><span class="highlight" id="skills-h"><i class="fa-solid fa-code" id="heading-i"></i>Skills</span></h2>
                     <h3>Advanced</h3>
@@ -110,7 +112,7 @@
                 </section>
 
                 <!-- Education Section -->
-                <div class="mobileLinks" id="educationMob"></div>
+                <div class="mobile-links" id="education-mob"></div>
                 <section id="education">
                     <h2><span class="highlight" id="education-h"><i class="fa-solid fa-book" id="heading-i"></i>Education</span></h2>
                     <h3>University of South Florida</h3>
@@ -123,7 +125,7 @@
                 </section>
 
                 <!-- Projects Section -->
-                <div class="mobileLinks" id="projectsMob"></div>
+                <div class="mobile-links" id="projects-mob"></div>
                 <section id="projects">
                     <h2><span class="highlight" id="projects-h"><i class="fa-solid fa-mug-hot" id="heading-i"></i>Projects</span></h2>
 
