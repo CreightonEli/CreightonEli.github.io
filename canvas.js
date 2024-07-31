@@ -7,8 +7,8 @@ let flowFieldAnimation;
 window.onload = function(){
     canvas = document.getElementById('canvas');
     ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth + 10;
+    canvas.height = window.innerHeight + 10;
     flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
     flowField.animate(0);
 }
