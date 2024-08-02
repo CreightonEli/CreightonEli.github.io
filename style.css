@@ -405,6 +405,10 @@ nav h1 {
     display: none;
 }
 
+#out-link-list {
+    padding-left: 0;
+}
+
 @media (max-width: 700px) {
     #out-link-list {
         display: none;
