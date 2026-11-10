@@ -130,16 +130,103 @@ a:hover {
     align-items: center;
     margin: 0 0 0 auto;
     width: 100%;
-    border-radius: 1.8rem;
     border: 1px solid var(--border-color);
+    border-radius: 28px;
     overflow: hidden;
+    background-image: linear-gradient(to bottom right, #f8f8ff, #C2C4F0);
 }
 
-.home-hero-container canvas {
-    background-color: #C2C4F0;
-    background-image: linear-gradient(to bottom right, #f8f8ff, #C2C4F0);
+.home-hero-container div.home-hero {
+    background-color: transparent;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, #c2c4f027 1px, transparent 1px),
+        linear-gradient(to bottom, #c2c4f027 1px, transparent 1px);
     width: 100%;
     height: 100%;
+}
+
+.home-hero .product-card {
+    width: 300px;
+    height: 175px;
+    top: 45px;
+    left: 45px;
+    position: relative;
+    background-color: var(--html-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 0 50px #0000001f;
+    // margin: 45px auto auto 45px;
+    animation: bob-down 4s ease-in-out infinite alternate;
+}
+.product-card span {
+    display: inline-block;
+    color: #afafaf;
+    margin: 24px;
+}
+
+.product-card div {
+    background-color: #afafaf;
+    height: 12px;
+    margin: 12px 24px;
+    border-radius: 2rem;
+}
+.product-card > div:nth-child(2) {
+    background-color: #a3a6e9;
+    margin: 16px 24px;
+    max-width: 100px;
+}
+.product-card > div:nth-child(4) {
+    width: 150px;
+}
+
+.home-hero .dev-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 175px;
+    top: 0;
+    left: 245px;
+    position: relative;
+    background-color: #323339;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 0 50px #0000001f;
+    // margin: 45px auto auto 45px;
+    animation: bob-up 4s ease-in-out infinite alternate;
+}
+.dev-card-top {
+    display: flex;
+    flex-direction: row;
+}
+.dev-card-top div {
+    background: #8eff8e;
+    width: 10px;
+    height: 10px;
+    border-radius: 2rem;
+    margin: auto 24px auto auto;
+}
+
+.dev-card span {
+    display: inline-block;
+    color: #afafaf;
+    margin: 24px;
+}
+.dev-card p {
+    color: #dddddd;
+    display: inline-block;
+    padding: 3px 24px;
+    font-size: 18px;
+    // background-color: #494a4e;
+}
+
+.dev-card .cursor {
+    display: inline-block;
+    margin: 0 0 0 2px;
+    transform: translateY(-3px);
+    font-weight: bold;
+    animation: blink 1s steps(1) infinite;
+    font-size: 16px;
 }
 
 // 

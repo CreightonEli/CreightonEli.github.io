@@ -1,0 +1,23 @@
+// hero card floating animations
+@keyframes bob-up {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, -16px);
+    }
+}
+@keyframes bob-down {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(0, 16px);
+    }
+}
+
+// hero typewriter cursor blink
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
