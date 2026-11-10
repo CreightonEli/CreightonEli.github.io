@@ -16,6 +16,15 @@
     }
 }
 
+// hero circle rotation
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+}
 // hero typewriter cursor blink
 @keyframes blink {
     0%, 100% { opacity: 1; }

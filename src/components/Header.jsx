@@ -1,8 +1,39 @@
 // Nav bar for the website
 import { Link } from 'react-router-dom';
-import { SunIcon } from '@phosphor-icons/react';
+import { SunIcon, MoonIcon, DesktopIcon } from '@phosphor-icons/react';
+import { useState, useEffect } from 'react';
+
+const MODES = ['system', 'light', 'dark'];
+
+const THEME_ICONS = {
+  light: <SunIcon size={24} weight="bold" />,
+  dark: <MoonIcon size={24} weight="bold" />,
+  system: <DesktopIcon size={24} weight="bold" />,
+};
 
 function Header() {
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return MODES.includes(savedTheme) ? savedTheme : 'system';
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'system') {
+      root.removeAttribute('data-theme');
+      localStorage.removeItem('theme');
+    } else {
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+  }, [theme]);
+
+  const cycleTheme = () => {
+    const nextIndex = (MODES.indexOf(theme) + 1) % MODES.length;
+    setTheme(MODES[nextIndex]);
+  };
+  const nextTheme = MODES[(MODES.indexOf(theme) + 1) % MODES.length];
+
   return (
     <header>
         <nav>
@@ -18,11 +49,13 @@ function Header() {
                 <Link to={"/resume"}><li>Resume</li></Link>
                 <Link to={"/contact"}><li>Contact</li></Link>
             </ul>
-            <button className='dark-mode-btn'>
-              {/* <span>
-                Dark mode
-              </span> */}
-              <SunIcon size={24} />
+            <button
+              className='dark-mode-btn'
+              onClick={cycleTheme}
+              aria-label={`Current theme: ${theme}. Switch to ${nextTheme} mode`}
+              title={`Switch to ${nextTheme} mode`}
+            >
+              {THEME_ICONS[theme]}
             </button>
         </nav>
     </header>

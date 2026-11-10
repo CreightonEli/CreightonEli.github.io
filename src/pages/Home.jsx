@@ -40,6 +40,7 @@ function Home() {
           
           <div className="home-hero-container">
             <div className="home-hero">
+              {/* <div className='hero-circle'></div> */}
               <div className='product-card'>
                 <span>PRODUCT</span>
                 <div></div>
