@@ -2,10 +2,12 @@
 
 function Contact() {
   return (
-    <main>
+    <main className="contact-page">
       <section>
-        <h1>Contact</h1>
-        <p>This is the contact page.</p>
+        <div className="page-title">
+          <h1>Contact</h1>
+          <p>This is the contact page.</p>
+        </div>
       </section>
     </main>  
   )

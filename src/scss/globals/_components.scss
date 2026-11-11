@@ -61,6 +61,13 @@ a:hover {
     mix-blend-mode: overlay;
 }
 
+// Multipage
+.page-title {
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--border-color);
+    width: 100%;
+}
+
 // 
 // Home Page
 // 
@@ -443,11 +450,6 @@ footer {
 
 main.resume-page section {
     flex-direction: column;
-}
-
-.resume-page .page-title {
-    padding-bottom: 16px;
-    border-bottom: 1px dashed var(--border-color);
 }
 
 .resume-page a {

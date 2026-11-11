@@ -12,6 +12,17 @@ button {
     font-family: 'Roboto', sans-serif;
 }
 
+// multipage
+.page-title h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2.8rem;
+}
+
+.page-title p {
+    margin: 8px 0 0;
+    color: var(--secondary-text);
+}
+
 // Home
 .intro-title > h1 {
     font-size: 6rem;
@@ -58,16 +69,6 @@ button {
 }
 
 // Resume
-.resume-page .page-title h1 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.8rem;
-}
-
-.resume-page .page-title p {
-    margin: 8px 0 0;
-    color: var(--secondary-text);
-}
-
 .resume-container h1, .resume-container h2, .resume-container h3 {
     margin: 0;
     font-family: 'Roboto Serif', serif;

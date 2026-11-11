@@ -2,10 +2,12 @@
 
 function Projects() {
   return (
-    <main>
+    <main className="projects-page">
       <section>
-        <h1>Projects</h1>
-        <p>This is the projects page.</p>
+        <div className="page-title">
+          <h1>Projects</h1>
+          <p>This is the projects page.</p>
+        </div>
       </section>
     </main>
   )
