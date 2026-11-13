@@ -10,6 +10,7 @@ function Resume() {
                     <p>Review my resume here. Download the PDF file below.</p>
                 </div>
                 <a href="./ElijahCResume.pdf" target="_blank"><button><span>Download </span><FilePdfIcon/></button></a>
+                
                 <div className="resume-container">
                     <div className="resume-top">
                         <h1>Elijah Creighton</h1>

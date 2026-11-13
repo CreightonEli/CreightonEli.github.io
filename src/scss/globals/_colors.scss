@@ -13,8 +13,19 @@
     // --bg-gradient: linear-gradient(to bottom, #231b2b, #090a11);
 }
 
+:root[data-theme='dark'] {
+    color-scheme: dark;
+    --primary-text: #fcfeff;
+    --secondary-text: #b6b6b6;
+    --border-color: #393649be;
+    --nav-btn-hover: #393649;
+    --html-bg: #0e0d11;
+    --header-bg: #23212b;
+    --highlight: #8086ff;
+}
+
 @media (prefers-color-scheme: dark) {
-    :root:not([data-theme='light']) {
+    :root:not([data-theme]) {
         color-scheme: dark;
         --primary-text: #fcfeff;
         --secondary-text: #b6b6b6;
