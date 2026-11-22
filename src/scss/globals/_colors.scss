@@ -8,6 +8,20 @@
     --html-bg: #f7f7f7;
     --header-bg: #fcfeff;
     --highlight: #8086ff;
+    
+    // project tag default colors
+    --category-bg: #ffffffd4;
+    --category-border: #5e5a7326;
+    --category-color: #11111a;
+
+    // project stack colors
+    --react-color: #58c4dc;
+    --html-color: #e34c26;
+    --css-color: #663399;
+    --scss-color: #c6538c;
+    --js-color: #f1e05a;
+    --ts-color: #3178c6;
+    --java-color: #b07219;
 
     // gradients
     // --bg-gradient: linear-gradient(to bottom, #231b2b, #090a11);
@@ -22,6 +36,10 @@
     --html-bg: #0e0d11;
     --header-bg: #23212b;
     --highlight: #8086ff;
+    // project tag colors
+    --category-bg: #3f3f47a6;
+    --category-border: #837e9963;
+    --category-color: #f2f2f2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,5 +52,9 @@
         --html-bg: #0e0d11;
         --header-bg: #23212b;
         --highlight: #8086ff;
+        // project tag colors
+        --category-bg: #3f3f47a6;
+        --category-border: #837e9963;
+        --category-color: #f2f2f2;
     }
 }

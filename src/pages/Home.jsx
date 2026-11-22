@@ -30,10 +30,10 @@ function Home() {
 
             <div className='button-container'>
               <Link to={"/projects"}>
-                <button className='alt-btn'>View projects <ArrowRightIcon/></button>
+                <button className='alt-btn'>View projects <ArrowRightIcon weight='bold'/></button>
               </Link>
               <Link to={"/contact"}>
-                <button>Contact me <ArrowRightIcon/></button>
+                <button>Contact me <ArrowRightIcon weight='bold'/></button>
               </Link>
             </div>
           </div>

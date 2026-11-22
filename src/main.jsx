@@ -6,6 +6,12 @@ import Header from './components/Header.jsx'
 import App from './App.jsx'
 import Footer from './components/Footer.jsx'
 
+const redirectPath = sessionStorage.getItem('redirect');
+if (redirectPath) {
+  sessionStorage.removeItem('redirect');
+  window.history.replaceState(null, '', redirectPath);
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

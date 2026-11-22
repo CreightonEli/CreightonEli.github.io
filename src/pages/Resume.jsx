@@ -42,7 +42,7 @@ function Resume() {
                                 <li>Built client-side search, genre and media-type filters that surface trending content and detailed item pages (synopsis, reviews, cast/crew).</li>
                                 <li>Implemented API-key onboarding flow storing the user’s TMDB key in localStorage to enable authenticated API calls.</li>
                             </ul>
-                            <span><a href="https://nullflix.vercel.app/">Live Site</a> • <a href="https://github.com/CreightonEli/notflix">Github</a></span>
+                            <span><a href="https://nullflix.vercel.app/">Live Site</a> • <a href="https://github.com/CreightonEli/notflix">GitHub</a></span>
                         </div>
                         <div className="resume-item">
                             <h3>IP Address Tracker</h3>
@@ -52,7 +52,7 @@ function Resume() {
                             <ul>
                                 <li>Integrated IP Geolocation API and Leaflet for its interactive maps, to display initial user IP on a map and update results for searched IPs/domains.</li>
                             </ul>
-                            <span><a href="http://creightoneli.github.io/ip-tracker">Live Site</a> • <a href="https://github.com/CreightonEli/ip-tracker">Github</a></span>
+                            <span><a href="http://creightoneli.github.io/ip-tracker">Live Site</a> • <a href="https://github.com/CreightonEli/ip-tracker">GitHub</a></span>
                         </div>
                     </div>
                     

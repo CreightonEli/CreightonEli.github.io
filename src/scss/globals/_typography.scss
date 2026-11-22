@@ -100,3 +100,34 @@ button {
     // color: var(--secondary-text);
     font-weight: 500;
 }
+
+// Projects List Page
+.banner-container .project-page-btn svg {
+    font-size: 24px;
+    margin: auto;
+}
+.stack-container span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: .7rem;
+}
+
+// Project Page
+.project-page .project-dates {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.project-page .project-summary {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.project-page .stack-container span {
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+.project-links .project-btn {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
