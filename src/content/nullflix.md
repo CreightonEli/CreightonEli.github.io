@@ -2,7 +2,7 @@
 
 Movie and TV show web app. See what is trending, who it is directed by and how well it is reviewed. You can search for just about anything, filter by media type or by genre, and learn more about the people who make movies happen by reading their biography or scrolling through their filmography.
 
-### Getting Started:
+### Getting Started
 
 Before you can use Nullflix there is a bit of setup you may need to do.
 
@@ -14,13 +14,7 @@ Before you can use Nullflix there is a bit of setup you may need to do.
 
 That's about all you need to do to enjoy Nullflix.
 
-### Screenshots:
-
-#### Home Page
-<img src="./src/assets/horizontal.png" alt="Desktop screenshot of the Home page" width="1080"/>
-<img src="./src/assets/vertical.png" alt="Mobile screenshot of the Home page" width="300"/>
-
-### Links:
+### Links
 
 - [React Docs](https://react.dev/reference/react)
 - [Vite Docs](https://vite.dev/guide/)
@@ -40,8 +34,3 @@ That's about all you need to do to enjoy Nullflix.
 - Phosphor Icons
 - Google Fonts
 - Various online video providers
-
-## Author
-
-- Website - [Elijah Creighton](https://creightoneli.github.io/)
-- LinkedIn - [Creightone](www.linkedin.com/in/creightone)

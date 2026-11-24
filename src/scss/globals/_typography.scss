@@ -121,6 +121,16 @@ button {
     font-weight: 300;
 }
 
+.project-page .stack-section h3 {
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    color: var(--secondary-text);
+    margin: 0 0 6px;
+    padding: 0;
+}
+
 .project-page .stack-container span {
     font-size: 16px;
     padding: 6px 10px;
@@ -130,4 +140,52 @@ button {
     font-size: 14px;
     font-weight: 500;
     font-family: "Roboto", sans-serif;
+}
+
+span.toc-heading {
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    color: var(--secondary-text);
+    margin: 0 0 6px;
+    padding: 0;
+}
+
+// project article section
+.project-page .project-article {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.project-page .project-article h2,
+.project-page .project-article h3 {
+    scroll-margin-top: 120px;
+}
+
+.project-page .project-article a {
+    color: var(--highlight);
+    font-weight: 500;
+    transition: 200ms ease-in-out;
+    // text-decoration: underline;
+}
+.project-page .project-article a:hover {
+    filter: brightness(1.25);
+}
+
+.project-page .project-article h2,
+.project-page .project-article h3 {
+    margin: 42px 0 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem;
+}
+
+.project-page .project-article > p {
+    margin: 16px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.project-page .project-article li {
+    margin: 16px 0;
+    font-family: 'Roboto', sans-serif;
 }

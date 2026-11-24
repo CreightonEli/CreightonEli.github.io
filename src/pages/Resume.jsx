@@ -60,7 +60,7 @@ function Resume() {
                         <h2>Job Experience</h2>
                         <div className="resume-item">
                             <h3>Bright Ice Scoop Shop</h3>
-                            <span className="date-span">JULY 2025 - PRESENT, TAMPA</span>
+                            <span className="date-span">JULY 2025 - NOVEMBER 2026, TAMPA</span>
                             <ul>
                                 <li>Managed high-volume customer lines efficiently during peak events, maintaining a positive attitude and reducing wait times.</li>
                                 <li>Educated customers on product offerings, including detailed flavor profiles and potential allergen cross-contamination risks.</li>

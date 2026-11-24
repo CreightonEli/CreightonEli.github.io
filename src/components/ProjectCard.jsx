@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import projects, { toProjectSlug } from '../data/projects';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
+import fallbackThumbnail from '../assets/BGProjectThumbnail.png'
 
 const FILTERS = {
     0: null,
@@ -20,14 +21,18 @@ const STACK_LABELS = {
     java: 'Java',
 };
 
-function ProjectCard({ num = 0 }) {
+function ProjectCard({ num = 0, sortOrder = "most-recent" }) {
     const filter = Object.prototype.hasOwnProperty.call(FILTERS, num)
         ? FILTERS[num]
         : null;
+    const sortedProjects = [...projects].sort((a, b) => {
+        const idDifference = Number(a.project_id) - Number(b.project_id);
+        return sortOrder === "most-recent" ? -idDifference : idDifference;
+    });
 
     return (
         <>
-            {projects.map((project) => (
+            {sortedProjects.map((project) => (
                 (!filter || project.category.toLowerCase() === filter) && (
                     <article className="project-card" key={project.project_id}>
                         <Link to={`/projects/${toProjectSlug(project.name)}`}>
@@ -36,7 +41,11 @@ function ProjectCard({ num = 0 }) {
                                 <div className='project-page-btn'>
                                     <ArrowUpRightIcon />
                                 </div>
-                                <img className="banner-img" src={project.banner_url} alt="" />
+                                {project.banner_url ? (
+                                    <img className="banner-img" src={project.banner_url} alt="" />
+                                ):
+                                    <img className="banner-img" src={fallbackThumbnail} alt="" />
+                                }
                             </div>
                             <div className="project-bottom">
                                 <div className="project-head">

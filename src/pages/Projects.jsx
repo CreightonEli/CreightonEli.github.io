@@ -4,6 +4,7 @@ import ProjectCard from "../components/ProjectCard"
 
 function Projects() {
   const [filter, setFilter] = useState(0)
+  const [sortOrder, setSortOrder] = useState("most-recent")
 
   return (
     <main className="projects-page">
@@ -12,45 +13,56 @@ function Projects() {
           <h1>Projects</h1>
           <p>This is the projects page.</p>
         </div>
-        <div className="project-filters" role="group" aria-label="Filter projects">
+        <div className="project-controls">
+          <div className="project-filters" role="group" aria-label="Filter projects">
+            <button
+              className={filter === 0 ? 'active' : ''}
+              aria-pressed={filter === 0}
+              onClick={() => setFilter(0)}
+            >
+              All
+            </button>
+            <button
+              className={filter === 1 ? 'active' : ''}
+              aria-pressed={filter === 1}
+              onClick={() => setFilter(1)}
+            >
+              Web Apps
+            </button>
+            <button
+              className={filter === 2 ? 'active' : ''}
+              aria-pressed={filter === 2}
+              onClick={() => setFilter(2)}
+            >
+              UI & Components
+            </button>
+            <button
+              className={filter === 3 ? 'active' : ''}
+              aria-pressed={filter === 3}
+              onClick={() => setFilter(3)}
+            >
+              Games
+            </button>
+            <button
+              className={filter === 4 ? 'active' : ''}
+              aria-pressed={filter === 4}
+              onClick={() => setFilter(4)}
+            >
+              Tools
+            </button>
+          </div>
           <button
-            className={filter === 0 ? 'active' : ''}
-            aria-pressed={filter === 0}
-            onClick={() => setFilter(0)}
+            className="project-sort-button"
+            type="button"
+            onClick={() => setSortOrder((current) => (
+              current === "most-recent" ? "least-recent" : "most-recent"
+            ))}
           >
-            All
-          </button>
-          <button
-            className={filter === 1 ? 'active' : ''}
-            aria-pressed={filter === 1}
-            onClick={() => setFilter(1)}
-          >
-            Web Apps
-          </button>
-          <button
-            className={filter === 2 ? 'active' : ''}
-            aria-pressed={filter === 2}
-            onClick={() => setFilter(2)}
-          >
-            UI & Components
-          </button>
-          <button
-            className={filter === 3 ? 'active' : ''}
-            aria-pressed={filter === 3}
-            onClick={() => setFilter(3)}
-          >
-            Games
-          </button>
-          <button
-            className={filter === 4 ? 'active' : ''}
-            aria-pressed={filter === 4}
-            onClick={() => setFilter(4)}
-          >
-            Tools
+            Sort by: {sortOrder === "most-recent" ? "Most recent" : "Least recent"}
           </button>
         </div>
         <div className="project-list">
-          <ProjectCard num={filter}/>
+          <ProjectCard num={filter} sortOrder={sortOrder}/>
         </div>
       </section>
     </main>

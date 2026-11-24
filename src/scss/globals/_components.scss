@@ -6,6 +6,7 @@ html {
     background: var(--html-bg);
     height: 100vh;
     transition: background-color 355ms, color 355ms;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -45,9 +46,9 @@ a {
     color: var(--primary-text);
     text-decoration: none;
 }
-a:hover {
-    color: white;
-}
+// a:hover {
+//     color: white;
+// }
 
 // create a noise effect
 .noise::before {
@@ -257,7 +258,7 @@ header {
     height: 100px;
 }
 
-nav {
+header nav {
     margin: 20px auto;
     padding: 10px 8px;
     display: flex;
@@ -276,7 +277,7 @@ nav {
     z-index: 999;
 }
 
-nav div {
+header nav div {
     margin: auto 0;
     display: flex;
     flex-direction: column;
@@ -292,7 +293,7 @@ nav div {
     transition: background-color 355ms, color 355ms;
 }
 
-nav .logo a {
+header nav .logo a {
     color: var(--header-bg);
     display: flex;
     flex-direction: column;
@@ -301,12 +302,17 @@ nav .logo a {
     padding: 10px;
 }
 
-nav .logo img {
-    height: 40px;
+header nav .logo img {
     width: 40px;
+    height: 40px;
 }
 
-nav ul {
+header nav .logo svg {
+    width: 24px;
+    height: 24px;
+}
+
+header nav ul {
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -315,7 +321,7 @@ nav ul {
     list-style: none;
 }
 
-nav ul li {
+header nav ul li {
     color: var(--secondary-text);
     margin: auto;
     padding: 8px 10px;
@@ -323,12 +329,12 @@ nav ul li {
     border-radius: 2rem;
     transition: all 355ms ease-in-out;
 }
-nav ul li:hover {
+header nav ul li:hover {
     color: var(--primary-text);
     background-color: var(--nav-btn-hover);
 }
 
-nav button.dark-mode-btn {
+header nav button.dark-mode-btn {
     display: flex;
     flex-direction: row;
     background: none;
@@ -343,16 +349,16 @@ nav button.dark-mode-btn {
     cursor: pointer;
     transition: all 355ms ease-in-out;
 }
-nav button.dark-mode-btn:hover {
+header nav button.dark-mode-btn:hover {
     color: var(--header-bg);
     background-color: var(--primary-text);
 }
 
-nav button.dark-mode-btn span {
+header nav button.dark-mode-btn span {
     margin: auto;
 }
 
-nav button.dark-mode-btn svg {
+header nav button.dark-mode-btn svg {
     margin: auto;
 }
 
@@ -661,32 +667,48 @@ main.resume-page section {
     gap: 16px;
 }
 
+.project-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
 .project-filters {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.project-filters button {
+.project-filters button,
+.project-sort-button {
     padding: 8px 14px;
     border: 1px solid var(--border-color);
     border-radius: 999px;
     background: var(--header-bg);
     color: var(--primary-text);
     cursor: pointer;
+    transition: 200ms ease-in-out;
 }
 
 .project-filters button:hover,
-.project-filters button.active {
+.project-filters button.active,
+.project-sort-button:hover {
     background: var(--primary-text);
     color: var(--header-bg);
 }
 
-article.project-card:nth-child(1) {
-    // min-width: 75%;
-    max-width: 711px;
-    // min-height: fit-content;
+.project-sort-button {
+    margin-left: auto;
 }
+
+// article.project-card:nth-child(1) {
+//     min-width: 75%;
+//     max-width: 711px;
+//     width: 100%;
+//     min-height: fit-content;
+// }
 // article.project-card:nth-child(1) {
 //     margin-bottom: 24px;
 // }
@@ -921,9 +943,35 @@ article.project-card:hover .banner-img {
     margin: auto 4px auto 0;
 }
 
-.project-page .project-detail-banner {
+.project-page .banner-container {
+    display: flex;
+    max-height: 600px;
+    // background-color: var(--highlight);
+    // border: 1px solid var(--border-color);
     border-radius: 32px;
+    justify-content: center;
+    overflow: hidden;
 }
+
+.project-page .project-detail-banner {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 14px;
+}
+
+.project-page .content-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.project-page .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 
 .project-page .title-container {
     display: flex;
@@ -954,12 +1002,16 @@ article.project-card:hover .banner-img {
 
 .project-page .project-summary {
     color: var(--secondary-text);
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid var(--border-color);
 }
 
 .project-page .project-links {
     display: flex;
     flex-direction: row;
     gap: 12px;
+    margin-top: 10px;
 }
 
 .project-links .project-btn {
@@ -998,15 +1050,73 @@ article.project-card:hover .banner-img {
     // border-bottom: 1px dashed var(--border-color);
 }
 
-.project-page .stack-section h3 {
-    font-size: 10px;
-    letter-spacing: 1px;
-    font-weight: 300;
-    color: var(--secondary-text);
-    margin: 0 0 6px;
+.project-page .stack-section .stack-container {
     padding: 0;
 }
 
-.project-page .stack-section .stack-container {
+.project-page .project-toc {
+    display: flex;
+    flex-direction: column;
+    min-width: 230px;
+    position: sticky;
+    top: 120px;
+    align-self: flex-start;
+}
+
+.project-page .project-toc ol {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--header-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.0470588235);
+    box-sizing: border-box;
+    gap: 6px;
+}
+
+.project-toc li {
+    list-style: none;
+}
+
+.project-toc li a {
+    width: 100%;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: var(--secondary-text);
+    transition: 200ms ease-in-out;
+}
+.project-toc li a:hover {
+    color: var(--primary-text);
+    background-color: var(--nav-btn-hover);
+}
+
+.project-toc .top-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px 12px;
+    color: var(--secondary-text);
+    transition: 200ms ease-in-out;
+}
+.project-toc .top-btn:hover {
+    color: var(--primary-text);
+}
+
+.project-page .project-article {
+    border-top: 1px dashed var(--border-color);
+    margin: 16px 0;
     padding: 0;
+}
+
+.project-page .project-article h2,
+.project-page .project-article h3,
+.project-page .project-article ul {
+    scroll-margin-top: 120px;
+    margin: 0;
 }
