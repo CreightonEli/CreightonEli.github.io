@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import projects, { toProjectSlug } from '../data/projects';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
-import fallbackThumbnail from '../assets/BGProjectThumbnail.png'
+import fallbackThumbnail from '../assets/branding/BGProjectThumbnail.png'
 
 const FILTERS = {
     0: null,
@@ -41,11 +41,18 @@ function ProjectCard({ num = 0, sortOrder = "most-recent" }) {
                                 <div className='project-page-btn'>
                                     <ArrowUpRightIcon />
                                 </div>
-                                {project.banner_url ? (
-                                    <img className="banner-img" src={project.banner_url} alt="" />
-                                ):
-                                    <img className="banner-img" src={fallbackThumbnail} alt="" />
-                                }
+                                <img
+                                    className="banner-img"
+                                    src={project.banner_url || fallbackThumbnail}
+                                    alt=""
+                                    data-fallback-applied={project.banner_url ? undefined : 'true'}
+                                    onError={(event) => {
+                                        if (event.currentTarget.dataset.fallbackApplied !== 'true') {
+                                            event.currentTarget.dataset.fallbackApplied = 'true';
+                                            event.currentTarget.src = fallbackThumbnail;
+                                        }
+                                    }}
+                                />
                             </div>
                             <div className="project-bottom">
                                 <div className="project-head">

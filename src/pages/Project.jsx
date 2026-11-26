@@ -4,8 +4,10 @@ import { ArrowLeftIcon, ArrowSquareOutIcon, ArrowUpIcon, GithubLogoIcon } from '
 import projects, { toProjectSlug } from '../data/projects';
 import Markdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
-import bannerFallback from '../assets/BGProjectBanner.png'
-import faviconFallback from '../assets/BGProjectLogo.png'
+import rehypeHighlight from 'rehype-highlight';
+import bannerFallback from '../assets/branding/BGProjectBanner.png'
+import faviconFallback from '../assets/branding/BGProjectLogo.png'
+import 'highlight.js/styles/atom-one-dark.css'; // css for code snippets
 
 const STACK_LABELS = {
     react: 'React',
@@ -125,7 +127,7 @@ function Project() {
 
                         {project.article_markdown && (
                             <article className='project-article' ref={articleRef}>
-                                <Markdown rehypePlugins={[rehypeSlug]}>{project.article_markdown}</Markdown>
+                                <Markdown rehypePlugins={[rehypeSlug, rehypeHighlight]}>{project.article_markdown}</Markdown>
                             </article>
                         )}
                     </div>

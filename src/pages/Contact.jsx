@@ -1,6 +1,7 @@
 // contact page
 import { LinkedinLogoIcon, GithubLogoIcon, AtIcon, ArrowSquareOutIcon } from "@phosphor-icons/react"
-
+import linkedInPFP from '../assets/linkedinpfp.jpg'
+import mailPFP from '../assets/mailpfp.jpg'
 
 function Contact() {
   return (
@@ -16,7 +17,7 @@ function Contact() {
             <div className="card-text">
               <h2>LinkedIn</h2>
               <a href="https://linkedin.com/in/creightone">
-                <img src="https://media.licdn.com/dms/image/v2/D4E35AQFXUrd2-L9hjg/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1698892687165?e=1795125600&v=beta&t=6PDIuKnmStqC8JEXqYaAN8ZvIrl1KsRX_IB5mpfNiZM" alt="linkedin profile picture" />
+                <img src={linkedInPFP} alt="linkedin profile picture" />
                 <h3>CreightonE <ArrowSquareOutIcon weight='bold' /></h3>
               </a>
             </div>
@@ -44,7 +45,7 @@ function Contact() {
             <div className="card-text">
               <h2>Email</h2>
               <a href="mailto:elijahcreighton@gmail.com">
-                <img src="https://media.licdn.com/dms/image/v2/D4E35AQFXUrd2-L9hjg/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1698892687165?e=1795125600&v=beta&t=6PDIuKnmStqC8JEXqYaAN8ZvIrl1KsRX_IB5mpfNiZM" alt="Gmail profile picture" />
+                <img src={mailPFP} alt="Gmail profile picture" />
                 <h3>elijahcreighton@gmail.com <ArrowSquareOutIcon weight='bold' /></h3>
               </a>
             </div>

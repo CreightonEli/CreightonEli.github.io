@@ -117,7 +117,7 @@ button {
 }
 
 .project-page .project-summary {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 300;
 }
 
@@ -188,4 +188,14 @@ span.toc-heading {
 .project-page .project-article li {
     margin: 16px 0;
     font-family: 'Roboto', sans-serif;
+}
+
+
+// .project-article ol li {
+//     list-style: decimal-leading-zero;
+// }
+.project-article ol li::marker {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    color: var(--secondary-text);
 }

@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import { SunIcon, MoonIcon, DesktopIcon } from '@phosphor-icons/react';
 import { useState, useEffect } from 'react';
-import logoSrc from '../assets/logo.gif'
+import logoSrc from '../assets/branding/logo.gif'
 
 const MODES = ['system', 'light', 'dark'];
 

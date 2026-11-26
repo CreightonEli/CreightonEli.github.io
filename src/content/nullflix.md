@@ -10,7 +10,7 @@ Before you can use Nullflix there is a bit of setup you may need to do.
 
 2. Once you have the key you can submit it on the website. Your API key is saved locally in your browser and used by it to make all the necessary API calls.
 
-3. Finally, I highly recommend you only access this site with a solid adblocking extension like [uBlock Origin](https://github.com/gorhill/uBlock). I don't put ads on the site myself but many of the video providers inject ads into their services which are used on the site. In order to avoid dealing with annoying pop-ups please install a decent adblocker.
+3. Finally, I highly recommend you only access this site with a solid adblocking extension like [uBlock Origin](https://github.com/gorhill/uBlock). I don't put ads on the site myself but many of the video providers inject ads into their services which will appear on the site. In order to avoid dealing with annoying pop-ups please install a decent adblocker.
 
 That's about all you need to do to enjoy Nullflix.
 

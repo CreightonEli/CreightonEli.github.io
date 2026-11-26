@@ -12,6 +12,27 @@
 //   live_site_url: '',
 // },
 
+// favicon imports
+import frontendMentor from '../assets/projects/frontendMentor.jpg'
+import sillySoundAppLogo from '../assets/projects/silly-sound-app/sillySoundAppLogo.jpg'
+import iatvLogo from '../assets/projects/iatv/iatvLogo.png'
+import blackjackLogo from '../assets/projects/blackjack/blackjackLogo.png'
+import terminalSweeperLogo from '../assets/projects/terminal-sweeper/terminalSweeperLogo.png'
+
+// banner imports
+import sillySoundAppBanner from '../assets/projects/silly-sound-app/sillySoundAppBanner.png'
+import iatvBanner from '../assets/projects/iatv/iatvBanner.png'
+import terminalSweeperBanner from '../assets/projects/terminal-sweeper/terminalSweeperBanner.png'
+
+// markdown file imports
+import qrCodeComponentMarkdown from '../content/qrCodeComponent.md?raw'
+import socialLinksMarkdown from '../content/socialLinks.md?raw'
+import adviceGenMarkdown from '../content/adviceGen.md?raw'
+import blackjackMarkdown from '../content/blackjack.md?raw'
+import calcMarkdown from '../content/calc.md?raw'
+import ipTrackerMarkdown from '../content/ipTracker.md?raw'
+import launchCountdownMarkdown from '../content/launchCountdown.md?raw'
+import contactFormMarkdown from '../content/contactForm.md?raw'
 import nullflixMarkdown from '../content/nullflix.md?raw'
 
 export function toProjectSlug(name) {
@@ -68,8 +89,8 @@ const projects = [
     end_date: '',
     summary: 'My solution to the QR code component challenge on Frontend Mentor.',
     banner_url: 'https://github.com/CreightonEli/QR-code-component-FEM/raw/main/design/screenshot.png',
-    favicon_url: '',
-    article_markdown: null,
+    favicon_url: frontendMentor,
+    article_markdown: qrCodeComponentMarkdown,
     github_url: 'https://github.com/CreightonEli/QR-code-component-FEM',
     live_site_url: 'https://creightoneli.github.io/QR-code-component-FEM/',
     category: 'UI & components',
@@ -101,8 +122,8 @@ const projects = [
     end_date: '',
     summary: 'My solution to the social links profile challenge on Frontend Mentor.',
     banner_url: 'https://github.com/CreightonEli/Social-Links-Profile-FEM/raw/main/screenshot.png',
-    favicon_url: '',
-    article_markdown: null,
+    favicon_url: frontendMentor,
+    article_markdown: socialLinksMarkdown,
     github_url: 'https://github.com/CreightonEli/Social-Links-Profile-FEM',
     live_site_url: 'https://creightoneli.github.io/Social-Links-Profile-FEM/',
     category: 'UI & components',
@@ -118,8 +139,8 @@ const projects = [
     end_date: '',
     summary: 'My solution to the Advice Generator App challenge on Frontend Mentor.',
     banner_url: 'https://raw.githubusercontent.com/CreightonEli/Advice-Generator-App-FEM/refs/heads/main/images/screenshot.png',
-    favicon_url: '',
-    article_markdown: null,
+    favicon_url: frontendMentor,
+    article_markdown: adviceGenMarkdown,
     github_url: 'https://github.com/CreightonEli/Advice-Generator-App-FEM',
     live_site_url: 'https://creightoneli.github.io/Advice-Generator-App-FEM/',
     category: 'web app',
@@ -135,8 +156,8 @@ const projects = [
     start_date: '2024',
     end_date: '',
     summary: "A joke web app that plays a selected audio file at random intervals. All thanks and blame to my buddy Charlie for the idea.",
-    banner_url: null,
-    favicon_url: '',
+    banner_url: sillySoundAppBanner,
+    favicon_url: sillySoundAppLogo,
     article_markdown: null,
     github_url: 'https://github.com/CreightonEli/Silly-Sound-App',
     live_site_url: 'https://creightoneli.github.io/Silly-Sound-App/',
@@ -154,8 +175,8 @@ const projects = [
     end_date: '',
     summary: 'I love playing card games. So, I decided to challenge myself to create one of these games for the web.',
     banner_url: 'https://creightoneli.github.io/images/projects/blackjack.png',
-    favicon_url: 'https://github.com/CreightonEli/Blackjack/blob/main/images/favicons/favicon-32x32.png?raw=true',
-    article_markdown: null,
+    favicon_url: blackjackLogo,
+    article_markdown: blackjackMarkdown,
     github_url: 'https://github.com/CreightonEli/Blackjack',
     live_site_url: 'https://creightoneli.github.io/Blackjack/',
     category: 'game',
@@ -172,8 +193,8 @@ const projects = [
     end_date: '',
     summary: 'My solution to the Calculator App challenge on Front End Mentor.',
     banner_url: 'https://github.com/CreightonEli/calc/raw/main/images/screenshots/screenshot1080.png',
-    favicon_url: '',
-    article_markdown: null,
+    favicon_url: frontendMentor,
+    article_markdown: calcMarkdown,
     github_url: 'https://github.com/CreightonEli/calc',
     live_site_url: 'https://creightoneli.github.io/calc/',
     category: 'web app',
@@ -190,8 +211,8 @@ const projects = [
     end_date: '',
     summary: 'My solution to the IP Address Tracker Challenge on Frontend Mentor.',
     banner_url: 'https://github.com/CreightonEli/ip-tracker/raw/main/images/screenshots/screenshotDesktop.png',
-    favicon_url: '',
-    article_markdown: null,
+    favicon_url: frontendMentor,
+    article_markdown: ipTrackerMarkdown,
     github_url: 'https://github.com/CreightonEli/ip-tracker',
     live_site_url: 'https://creightoneli.github.io/ip-tracker/',
     category: 'web app',
@@ -208,8 +229,8 @@ const projects = [
     end_date: '',
     summary: 'My solution to the launch countdown challenge on Frontend Mentor.',
     banner_url: 'https://github.com/CreightonEli/launch-countdown/raw/main/images/screenshots/screenshotDesktop.png',
-    favicon_url: '',
-    article_markdown: null,
+    favicon_url: frontendMentor,
+    article_markdown: launchCountdownMarkdown,
     github_url: 'https://github.com/CreightonEli/launch-countdown',
     live_site_url: 'https://creightoneli.github.io/launch-countdown/',
     category: 'UI & components',
@@ -226,8 +247,8 @@ const projects = [
     end_date: '',
     summary: 'My solution to the contact form challenge on Frontend Mentor.',
     banner_url: 'https://github.com/CreightonEli/contact-form-FEM/raw/main/assets/images/screenshotDesktop.png',
-    favicon_url: '',
-    article_markdown: null,
+    favicon_url: frontendMentor,
+    article_markdown: contactFormMarkdown,
     github_url: 'https://github.com/CreightonEli/contact-form-FEM',
     live_site_url: 'https://creightoneli.github.io/contact-form-FEM/',
     category: 'UI & components',
@@ -243,8 +264,8 @@ const projects = [
     start_date: '2024',
     end_date: '2025',
     summary: "Internet Archive TV. A perhaps overly simplistic web app specifically for browsing the internet archive's video media.",
-    banner_url: null,
-    favicon_url: '',
+    banner_url: iatvBanner,
+    favicon_url: iatvLogo,
     article_markdown: null,
     github_url: 'https://github.com/CreightonEli/iatv',
     live_site_url: 'https://creightoneli.github.io/iatv/',
@@ -280,8 +301,8 @@ const projects = [
     start_date: '2025',
     end_date: '2026',
     summary: 'Minesweeper game with a computer terminal aesthetic.',
-    banner_url: null,
-    favicon_url: '',
+    banner_url: terminalSweeperBanner,
+    favicon_url: terminalSweeperLogo,
     article_markdown: null,
     github_url: 'https://github.com/CreightonEli/minesweeper',
     live_site_url: 'https://creightoneli.github.io/minesweeper/',
